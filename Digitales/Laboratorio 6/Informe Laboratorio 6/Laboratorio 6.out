@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Objetivos}{}% 1
+\BOOKMARK [1][-]{section.2}{Introducci\363n}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Pasos para Maquina de estados}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Diagrama de Estados}{subsection.2.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Tabla del estado siguiente}{subsection.2.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Tabla de transiciones de los Flip-Flops}{subsection.2.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Mapas de Karnaugh}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.5}{Expresiones L\363gicas para las entradas de los Flip-Flops}{subsection.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.6}{Implementaci\363n del contador}{subsection.2.1}% 9
+\BOOKMARK [1][-]{section.3}{Materiales Y M\351todos}{}% 10
+\BOOKMARK [1][-]{section.4}{An\341lisis Y Resultados}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Maquinas de estados finitos 1 Producto y 2 Monedas}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{Maquinas de estados finitos 2 Productos y 3 Monedas}{section.4}% 13
+\BOOKMARK [1][-]{section.5}{Conclusiones}{}% 14
+\BOOKMARK [1][-]{section*.7}{Referencias}{}% 15

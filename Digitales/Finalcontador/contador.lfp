@@ -1,0 +1,5 @@
+# begin LFP file D:\Unal\Proyectos VHDL\Practicas\Practica4\Finalcontador\contador.lfp
+designfile contador.v
+parttype xc3s200-5-ft256
+bus_delimiter 1;
+set_busdelim_onsave 1;

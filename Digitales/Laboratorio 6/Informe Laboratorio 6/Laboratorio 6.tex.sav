@@ -1,0 +1,214 @@
+%%-------------------------------------------------------------------
+%% Definición del tipo de documento
+%%-------------------------------------------------------------------
+\documentclass[twocolumn]{IEEEtran}
+%%-------------------------------------------------------------------
+%% Paquetes y librerías que se van a cargar
+%%-------------------------------------------------------------------
+\usepackage{graphicx}%manejo de graficos
+\usepackage[latin1]{}% Escritura en castellano con acentos
+\usepackage{times}
+\usepackage{amssymb,amsfonts}
+\usepackage[tbtags]{amsmath}
+\usepackage{cite}
+\usepackage[all]{xy}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[all]{xy}
+\usepackage[centerlast, small]{caption}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+%\usepackage[dvips, pdfstartview=FitH, bookmarks=true,hypertexnames=false, letterpaper,linktocpage,colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+%%-------------------------------------------------------------------
+%% Inicio del documento
+%%-------------------------------------------------------------------
+\begin{document}
+%%-------------------------------------------------------------------
+\title{Maquina de estados Finitos FSM}
+%%-------------------------------------------------------------------
+%% Autor y otros datos
+%%-------------------------------------------------------------------
+\author{David Ricardo Martínez Hernández Código: $261931$\\
+        Juan Pablo Rodríguez Rojas Código: $261744$}
+\maketitle
+%%-------------------------------------------------------------------
+\markboth{Universidad Nacional de Colombia}{}
+%%-------------------------------------------------------------------
+%% Otras definciones en español
+%%-------------------------------------------------------------------
+\floatname{algorithm}{Algoritmo}
+%%---------------------------------------------------------
+%% Resumen y Palabras clave
+%%--------------------------------------------------------
+\begin{abstract}
+Se realizo un circuito que simulara en una FPGA una maquina expendedora de productos, teniendo como teoría el funcionamiento de una maquina de estados, diseñando en Xilinx un programa que cumpla con las condiciones previamente establecidas en el diagrama de estados, tomado en cuenta el cambio de estado del sistema y las posibles condiciones que se puedan presentar, este programa debe entregar un producto y su respectivo cambio, teniendo en cuenta que se manejan diferentes valores de monedas (Asumiendo que las monedas son el dinero que se ingresa a la maquina representado por pulsadores). La salida de estos pulsadores esta determinada por los displays de la FPGA, en ellos se muestran la cantidad de dinero acumulado, el tipo de producto que se quiera obtener y el cambio, además al entregar un producto se debe prender un display que informe sobre la entrega del mismo.
+\end{abstract}
+
+\begin{keywords}
+Diagrama de Estados, Estado, Estado Presente, Estado Siguiente, Flanco de Bajada, Flanco de Subida, Flip-Flop, Maquina de Estado, Señal Sincrónica.
+\end{keywords}
+%%---------------------------------------------------------
+%% Cuerpo del trabajo
+%%---------------------------------------------------------
+\section{Objetivos}
+\begin{itemize}
+  \item Comprender el funcionamiento, la importancia y la implementación de una maquina de estados finitos (FMS) para controlar un precedo determinado.
+  \item Diseñar una maquina de estados capaz de controlar una maquina expendedora de productos, capaz de recibir un número determinado de monedas con diferentes opciones de productos dando el cambio de dinero si es necesario.
+  \item Comprender y determinar la diferencia entre una \textbf{maquina de Mealy} y una \textbf{maquina de Moore} y sus diferentes aplicaciones.
+\end{itemize}
+
+\section{Introducción}
+\noindent
+Un circuito combinacional está formado por una etapa de lógica combinacional y una etapa de memoria (flip-Flops). Los latch y flip-flops son bloques de construcción básicos de los circuitos secuenciales, pero por si solos son circuitos secuenciales de retroalimentación que se pueden analizar formalmente. \\
+Una maquina de estado es un nombre genérico dado a estos circuitos secuenciales, "\textit{temporizado}" hace referencia al hecho de que sus elementos de almacenamiento (flip-flops) emplean una entrada de reloj y "\textit{sincrónica}" significa que todos los flip-flops utilizan una misma señal de reloj. Una maquina de estado cambia única y exclusivamente cuando es detecta un flanco de disparo o "\textit{pulso}" en la señal de reloj.\\
+No todos los circuitos secuenciales tienen variables de entrada y de salida, sin embargo todos tienen variables de excitación y variables de estado. La memoria de estado es un conjunto de $n$ flip-flops que almacenan el estado actual de la maquina y tiene $2^n$ estados distintos. El estado siguiente de la maquina de estado fig. \ref{fig1} esta determinado por la "\textit{lógica de estado siguiente, F}" como una función de la entrada y estado actuales. La "\textit{lógica de salida G}" determina la salida como una función de la entrada y el estado actual.\footnote{Texto tomado de \cite{wakerly}, \textit{Págs $550$ y $551$}, \cite{floyd}, \textit{Págs $573$ y $574$}}\\
+Un circuito secuencial cuya salida depende tanto del estado como de la entrada fig. \ref{fig1} se conoce como una \textbf{Maquina de Mealy}.
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.4]{Figuras/mealymachine.png}
+	\caption{Maquina de Mealy \cite{wakerly}}
+	\label{fig1}
+\end{figure}
+\noindent
+La \textit{Maquina de Moore} la salida depende únicamente del estado actual fig. \ref{fig2}.\\
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.4]{Figuras/mooremachine.png}
+	\caption{Maquina de Moore \cite{wakerly}}
+	\label{fig2}
+\end{figure}
+\noindent
+Existe un procedimiento de diseño general para los circuitos secuenciales a los contadores sincrónicos:
+\begin{enumerate}
+  \item Diagrama de estados.
+  \item Tabla del estado siguiente.
+  \item Tabla de transiciones de los Flip-Flops.
+  \item Mapas de Karnaugh.
+  \item Expresiones Lógicas para las entradas de los Flip-Flops.
+  \item Implementación del contador.
+\end{enumerate}
+
+\subsection{Pasos para Maquina de estados}
+\subsubsection{Diagrama de Estados}
+\noindent
+Presenta la información de los pasos anteriores y siguientes cuando se aplica una señal de reloj fig. \ref{fig3}.
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.4]{Figuras/statediagram.png}
+	\caption{Diagrama de Estados para un contador en código Gray, \cite{floyd} \textit{pág 574}}
+	\label{fig3}
+\end{figure}
+
+\subsubsection{Tabla del estado siguiente}
+\noindent
+Una tabla de estado siguiente enumera cada estado del contador (estado actual) y cada estado siguiente, "el estado siguiente es el estado al que pasa el contador cuando se aplica un impulso de reloj. En la TAB. \ref{tab1} se encuentra la tabla que define estos estados.
+\begin{table}[H]
+	\centering
+		\begin{tabular}{|c|c|c||c|c|c|}\hline
+		 & Estado Actual &  &  & Estado Siguiente &  \\
+		 $Q_2$ & $Q_1$ & $Q_0$ & $Q_2$ & $Q_1$ & $Q_0$ \\ \hline
+		 0 & 0 & 0 & 0 & 0 & 1 \\ \hline
+		 0 & 0 & 1 & 0 & 1 & 1 \\ \hline
+		 0 & 1 & 1 & 0 & 1 & 0 \\ \hline
+		 0 & 1 & 0 & 1 & 1 & 0 \\ \hline
+		 1 & 1 & 0 & 1 & 1 & 1 \\ \hline
+		 1 & 1 & 1 & 1 & 0 & 1 \\ \hline
+		 1 & 0 & 1 & 1 & 0 & 0 \\ \hline
+		 1 & 0 & 0 & 0 & 0 & 0 \\ \hline
+		\end{tabular}
+			\caption{Tabla del estado siguiente para el código Gray}
+				\label{tab1}
+\end{table}
+
+\subsubsection{Tabla de transiciones de los Flip-Flops}
+\noindent
+Se enumeran todas las posibles transiciones de salida, mostrando como evoluciona la salida $Q$ del flip-flop al pasar de los asados actuales a los estados siguiente.
+
+\subsubsection{Mapas de Karnaugh}
+\noindent
+Los mapas de Karnaugh se utiliza para determinar la lógica requerida para las entradas de cada flip-flop del contador. A partir de los estados de las entradas de la tabla de transiciones se introduce un $1$, un $0$ o una $X$ en cada celda de la tabla correspondiente al estado actual, dependiendo de la transición de salida de cada flip-flop.
+
+\subsubsection{Expresiones Lógicas para las entradas de los Flip-Flops}
+\noindent
+A partir de los mapas de Karnaugh se obtienen las expresiones lógicas para las entradas de cada flip-flop.
+
+\subsubsection{Implementación del contador}
+\noindent
+Consiste en implementar la lógica combinacional a partir de las expresiones para las entradas de cada flip-flop, conectados entre si para crear el contador.
+
+\section{Materiales Y Métodos}
+\begin{itemize}
+  \item Computador.
+  \item FPGA.
+  \item Software Xilinx, Inc.
+\end{itemize}
+
+\section{Análisis Y Resultados}
+\subsection{Maquinas de estados finitos $1$ Producto y $2$ Monedas}
+\noindent
+Se diseño un programa en VHDL que cumpliera el siguiente Diagrama de estados fig. \ref{fig4}.
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.4]{Figuras/statemachine1.png}
+	\caption{Diagrama de Estados Maquina Expendedora}
+	\label{fig4}
+\end{figure}
+\noindent
+El código que se utilizo para hacer esta maquina de estados esta en un archivo adjunto llamado \textbf{\textit{State_Machine_one_Product.txt}}, en este archivo se encuentra todo el código que se utilizo para realizar esta práctica.\\
+No se pudo cumplir la práctica por un problema en la visualización de los displays, no hacia bien la multiplexación e los mismos, aunque si se \\
+
+\subsection{Maquinas de estados finitos $2$ Productos y $3$ Monedas}
+\noindent
+Se diseño un programa en VHDL que cumpliera el siguiente Diagrama de estados fig..
+\\
+aquí va el diagrama de estados
+\\
+\noindent
+El código que se utilizo para hacer esta maquina de estados esta en un archivo adjunto llamado \textbf{asdasdsadasdas}\\
+
+Al momento de implementar el código en el FPGA se obtuvieron los datos esperados, de acuerdo al diagrama de estados.
+
+\section{Conclusiones}
+\begin{itemize}
+	\item Se comprendió el funcionamiento de una maquina de estados finitos, comprobándolo con los resultados obtenidos en el laboratorio sobre esta práctica.
+	\item Se implemento la maquina expendedora utilizando la teoría sobre maquina de estado finitos, realizando algunos de los pasos propuestos en este informe.
+\end{itemize}
+%%---------------------------------------------------------
+%% Bibliografía
+%%---------------------------------------------------------
+\bibliographystyle{ieeetran}
+\begin{thebibliography}{99}
+
+\bibitem{dorf} Dorf Svoboda.
+{\em "`Circuitos Eléctricos"'}.
+Alfaomega, 2006.
+
+\bibitem{savant} C. J. Savant.
+{\em "`Diseños Electrónicos: Circuitos de Sistema"'}.
+Prentice-Hall, 2006.
+
+\bibitem{wakerly} John F. Wakerly.
+{\em "`Diseño Digital: Principios y Prácticas"'}.
+Prentice-Hall, 2001.
+
+\bibitem{floyd} Thomas L. Floyd.
+{\em "`Fundamentos de Sistemas Digitales"'}.
+Prentice-Hall, 2000.
+
+\bibitem{page1} Sito Web: \url{http://www.virtual.unal.edu.co/cursos/ingenieria/2000477/lecciones/070101.htm}
+
+\end{thebibliography}
+%%---------------------------------------------------------
+%% Fin del documento
+%%---------------------------------------------------------
+\end{document}

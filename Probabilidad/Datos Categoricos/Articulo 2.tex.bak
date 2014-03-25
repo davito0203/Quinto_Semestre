@@ -1,0 +1,233 @@
+%%-------------------------------------------------------------------
+%% Definición del tipo de documento
+%%-------------------------------------------------------------------
+%\documentclass[twocolumn,10pt]{C:/texmf/tex/IEEEtran}  %para usar la libreria en español activa esta línea y desactiva la siguiente
+%\documentclass[twocolumn]{IEEEtran}            %para usar la libreria en ingles activa esta línea y desactiva la anterior
+\documentclass[10pt,graphicx,caption,rotating]{article}
+\textheight=24cm
+\textwidth=18cm
+\topmargin=-2cm
+\oddsidemargin=0cm
+%%-------------------------------------------------------------------
+%% Paquetes y librerías que se van a cargar
+%%-------------------------------------------------------------------
+%\usepackage[spanish]{babel,varioref}
+%\selectlanguage{spanish}
+
+%\usepackage[spanish]{babel} % Manejo de idiomas
+%\usepackage[spanish]{babel,varioref}
+%\selectlanguage{spanish}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{graphicx}%manejo de graficos
+%\usepackage[latin1]{inputenc} % Escritura en castellano con acentos
+\usepackage{times}
+\usepackage{amssymb,amsfonts}
+\usepackage[tbtags]{amsmath}
+\usepackage{cite}
+\usepackage[all]{xy}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[all]{xy}
+\usepackage[centerlast, small]{caption}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+%\usepackage[dvips, pdfstartview=FitH, bookmarks=true,hypertexnames=false, letterpaper,linktocpage,colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+%%-------------------------------------------------------------------
+%% Inicio del documento
+%%-------------------------------------------------------------------
+\begin{document}
+%%-------------------------------------------------------------------
+%% Autor y otros datos
+%%-------------------------------------------------------------------
+%Cerramos el bloque para escribir la portada
+\begin{titlepage}
+
+\begin{center}
+
+{\huge \textbf{Datos Categóricos}}\\[7cm]
+{\Large \textbf{Integrantes:}}\\
+{\Large Ricardo José García Medina Código: 214997}\\
+{\Large David Eduardo León Vanegas Código: 214951}\\
+{\Large David Ricardo Martínez Hernández Código: 261931}\\[6cm]
+
+{\Large Probabilidad Y Estadistica Fundamental}\\
+{\Large Sandra Vergara Cardozo}\\[6cm]
+
+{\Large Universidad Nacional de Colombia}\\
+{\Large Facultad de Ingeniería}\\
+{\Large Bogotá}\\
+\date{}
+\end{center}
+
+\end{titlepage}
+%\title{Datos Categóricos}
+%\maketitle
+%%-------------------------------------------------------------------
+%\markboth{Universidad Nacional de Colombia}{}
+%%-------------------------------------------------------------------
+%%Tabla de contenido
+\tableofcontents
+\newpage
+%%-------------------------------------------------------------------
+%% Otras definciones en español
+%%-------------------------------------------------------------------
+\floatname{algorithm}{Algoritmo}
+%%---------------------------------------------------------
+%% Resumen y Palabras clave
+%%--------------------------------------------------------
+%%\begin{abstract}
+%%.
+%%\end{abstract}
+
+%%\begin{keywords}
+%%.
+%%\end{keywords}
+%%---------------------------------------------------------
+%% Cuerpo del trabajo
+%%---------------------------------------------------------
+\section{Obejtivos}
+\begin{itemize}
+	\item Comprender la definición de un dato categórico y la diferencia entre datos cuantitativos.
+	\item Conocer el método de chi-cuadrado ($\chi ^{2}$).
+	\item Comprender como se debe desarrollar el análisis de datos categóricos y las herramientas que se deben utilizar para realizarlo.
+	\item Mostrar a nuestros compañeros la importancia del análisis de datos categóricos para el desarrollo de la practica experimental.
+	\item Saber elegir la técnica apropiada para cada situación de análisis de datos categóricos.
+	\item Comprender e interpretar correctamente los resultados obtenidos.
+	\item Comprender la definición y el uso de los modelos loglineal saturado y jerárquico para el desarrollo de análisis para datos categóricos.
+\end{itemize}
+
+\section{Introducción}
+%\noindent
+%Tanto una distribución de frecuencias como un histograma se pueden construir cuando el conjunto de datos es de naturaleza \textbf{\textit{cualitativa} categórica}. en algunos casos habrá ordenamiento natural de clases, es decir que son organizados en grupos de la misma clase, en tanto que en otros casos el orden sera arbitrario, como las diferentes religiones del mundo. Con estos datos categóricos, los intervalos anteriores cuyos rectángulos se construyen, deben tener igual amplitud.\footnote{Texto tomado de \cite{devore}, \textit{Pag 22}}\\
+
+\section{Análisis De Datos Categóricos}
+%Los datos categóricos son los que provienen de resultados de experimentos en los que los resultados se miden en escalas categóricas, son las mismas variables cualitativas.
+
+%\begin{itemize}
+%	\item Escalas categóricas: sólo asignan una categoría o clasifican el fenómeno o propiedad a que se mide.
+%\end{itemize}
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[scale=0.8]{datos.jpg}
+%\label{fig1}
+%\end{figure}
+
+%Cuando se tienen datos categóricos, el análisis que se hace es determinar el tipo de asociación existente, entre ciertas variables cualitativas, puede que no haya asociación alguna entonces se dice que las variables son independientes, o que haya asociación lo que quiere decir que algunos valores de una variable inclinan a que la otra variable tome ciertos valores más que otros, cuando hay asociación existen grados de intensidad, que hacen que la predisposición sea mayor o menor.
+%\\
+%La independencia y dependencia es simétrica.
+%\\
+%$$A \ \  ind. \ \ o \ \ depen. \ \  de \ \ B   \Longrightarrow  B \ \ ind. \ \ o \ \ depen. \ \  de \ \  A$$
+
+\subsection{Tablas de Contingencia}
+
+
+\subsection{Esquemas}
+
+
+\subsubsection{Muestreo}
+
+\subsubsection{Multinomial}
+
+\subsubsection{Poisson}
+
+
+\section{Análisis de dos variables}
+%Cuando se quiere saber si dos variables cualitativas están asociadas o no se utilizan las \textit{tablas de contingencia}  o de valores observados. En estas tablas, las variables se representan al lado izquierdo y en la parte superior. Supóngase que se tienen dos eventos $A$ con $i$ opciones y $B$ con $j$ opciones, entonces la tabla de contingencia para estas variables seria.
+%\begin{center}
+%Tabla 1. Tabla de contingencia
+%\\
+%\begin{tabular}{|c |c |c |c |c |c |}
+%\hline
+%$B\diagdown A$&$1$& \ \ \ \ \ \ ... \ \ \ \ \ &$i-1$&$i$&$Total$\\\hline
+%$1$&$o_{11}$ & \ \ \ & & &\\\hline
+%.& &. \ \ \ \ \ \ \ \ \ \ & & & \\
+%.& &\ \ \ \ \ . \ \ \ \ \ & & & \\
+%.& &\ \ \ \ \ \ \ \ \ \ . & & & \\\hline
+%$j-1$& &\ \ \ &$o_{i-1j-1}$& & \\\hline
+%$j$& &\ \ \ & &$o_{ij}$&$o_{i\bullet}$ \\\hline
+%Total& &\ \ \ & &$o_{\bullet j}$ & $n$\\\hline
+%\end{tabular}
+%\label{tab1}
+%\end{center}
+%Donde $o_{ij}$ es la frecuencia que tiene la característica $ij$, $o_{i.}$ y $o_{.j}$ son las frecuencias totales para la característica $i$ y $j$, respectivamente, estas reciben el nombre de frecuencias marginales y $n$ es el total de observaciones.
+%$$ o_{i\bullet}=\sum^{i}_{i=1}o_{ij}$$
+%$$ o_{\bullet j}=\sum^{j}_{j=1}o_{ij}$$
+%$$n=\sum^{i}_{i=1}\sum^{j}_{j=1}o_{ij}=\sum^{i}_{i=1}o_{i\bullet}=\sum^{j}_{j=1}o_{\bullet
+%j}$$
+%Luego de que se tiene la tabla de valores esperados, se debe hallar la tabla de valores esperados que se obtiene con.
+%$$ e_{ij}=\frac{o_{i \bullet}o_{\bullet j}}{n}$$
+%así la tabla de valores esperados es parecida a la tabla de contingencia solo que se remplaza $o_{ij}$ por $e_{ij}$ para todo $o_{ij}$ de la tabla, en cuanta  a las frecuencias marginales se hace la sumatoria en cada fila y columna con los valores de las frecuencias esperadas, mientras que $n$ será el mismo valor y puede rectificarse con la suma de las frecuencias marginales.
+%\\
+%Con la tabla de frecuencias esperas puede saber si existe relación entre las variables ya que si la tabla de contingencia es idéntica a la tabla de frecuencias esperadas las variables no tiene ninguna relación son independientes, en caso contrario hay asociación, el problema que surge ahora es saber si las tablas presentan mucha diferencia o no, para esto se utiliza un estadístico que nos elimina este problema.
+
+\subsection{Estadístico chi-cuadrado $\chi ^{2}$}
+
+%$$\chi^{2}=\sum^{i}_{i=1}\sum^{j}_{j=1}\frac{(o_{ij}-e_{ij})^{2}}{e_{ij}}=\sum^{i}_{i=1}\sum^{j}_{j=1}\frac{o^{2}_{ij}}{e_{ij}}
+%- n$$
+%El chi-cuadrado ($\chi ^{2}$) es una medida que refleja el grado de diferencia entre las tablas de frecuencias obtenidas y esperadas, es un estadístico de asociación. Si este estadístico es $0$ entonces las tablas son idénticas y quiere decir que las variables son independientes y ha medida que éste sea más grande habrá mayor asociación entre las variables, el problema del chi-cuadrado radica que no tiene un limite superior, por ende no se sabe si este valor es grande.
+%$$0\leq \chi^{2}<\infty$$
+%para saber si este estadístico es grande o pequeño se debe utilizar otro estadístico que es el grado de libertada.
+%$$Grado\ \ de\ \ libertad=(N^{o} \ \ de \ \ filas-1)(N^{o} \ \ de \ \ columnas-1)$$
+%Conociendo el grado de libertad y el Chi-cuadrado, solo basta con mirar en la tabla de Chi-cuadrado, la cual por cada grado de libertad y una probabilidad de rechazar erróneamente el hecho de que las variable sean independientes, se tiene un valor de chi-cuadrado, si el valor hallado de $\chi^{2}$ es mayor que el de la tabla entonces existe relación entre las variables.\\
+%\\
+%\begin{figure}[h]
+%\centering
+%\includegraphics[scale=0.8]{tablachi2.jpg}
+%\label{fig2}
+%\end{figure}
+%\\
+%Suele usarse los valores con la probabilidad de $0.05$ ya que con éste se puede decir que las variables son independientes o no con mayor confianza. aunque con ésto ya se puede saber si la variables son independientes o no, no se puede saber cual es el grado de asociación existente, cuando hay relación para saber esto existen varias medidas que no pueden ayudar en ésto pero la más apropiada es el \textit{Coeficiente V de cramer}.
+
+%\begin{itemize}
+%	\item Coeficiente V de cramer
+%\end{itemize}
+%$$V=\sqrt{\frac{\chi^{2}}{n(k-1)}} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ; 0\leq V \leq1$$
+%Donde $K$ es el mínimo entre el número de filas y el numero de columnas, cuando $V$ toma el valor $0$ significa que no hay asociación alguna (son independientes) y entre mayor sea este valor, mayor será el grado de intensidad en la asociación.
+
+\subsection{Tabla de Contingencia Bidimensionales}
+
+\section{Análisis de tres o más variables}
+
+
+\subsection{Modelos Logit y Loglineales}
+
+%\section{Conclusiones y Recomendaciones}
+%\begin{itemize}
+	%\item .
+	%\item .
+	%\item .
+	%\item .
+	%\item .
+%\end{itemize}
+%%---------------------------------------------------------
+%% Bibliografía
+%%---------------------------------------------------------
+\bibliographystyle{ieeetran}
+\begin{thebibliography}{99}
+
+\bibitem{devore} Devore, Jay L.
+{\em "` Probabilidad y estadística para ingeniería y ciencias "'}.
+THOMSON, Sexta edición, 2004.
+
+\bibitem{agresti} Agresti, Alan.
+{\em "` An Introduction to Categorical Data Analysis "'}.
+JOHN WILEY y SONS, Inc., Segunda edición, 2002.
+
+\bibitem{page1} Sito Web: \url{http://www.jorgegalbiati.cl/enero_07/Categoricos.pdf}
+
+\end{thebibliography}
+%%---------------------------------------------------------
+%% Fin del documento
+%%---------------------------------------------------------
+\end{document}

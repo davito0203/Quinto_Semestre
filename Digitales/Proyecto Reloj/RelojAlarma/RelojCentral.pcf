@@ -1,0 +1,26 @@
+//! **************************************************************************
+// Written by: Map K.31 on Thu Nov 04 23:35:24 2010
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "sonido" LOCATE = SITE "J14" LEVEL 1;
+COMP "alarma" LOCATE = SITE "R17" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "F15" LEVEL 1;
+COMP "breloj" LOCATE = SITE "G18" LEVEL 1;
+COMP "hora" LOCATE = SITE "D18" LEVEL 1;
+COMP "minutos" LOCATE = SITE "B18" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "vis<0>" LOCATE = SITE "H14" LEVEL 1;
+COMP "vis<1>" LOCATE = SITE "J17" LEVEL 1;
+COMP "vis<2>" LOCATE = SITE "G14" LEVEL 1;
+COMP "vis<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "vis<4>" LOCATE = SITE "D17" LEVEL 1;
+COMP "vis<5>" LOCATE = SITE "F18" LEVEL 1;
+COMP "vis<6>" LOCATE = SITE "L18" LEVEL 1;
+COMP "off" LOCATE = SITE "H13" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

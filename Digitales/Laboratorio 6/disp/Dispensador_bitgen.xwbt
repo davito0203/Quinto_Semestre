@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\DAVID\Desktop\disp\Dispensador.ncd
+OUTFILE=C:\Users\DAVID\Desktop\disp\Dispensador.bit
+FAMILY=Spartan3
+PART=xc3s200-5ft256
+WORKINGDIR=C:\Users\DAVID\Desktop\disp
+LICENSE=WebPack
+USER_INFO=__0_0_0

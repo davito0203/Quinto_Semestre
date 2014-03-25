@@ -1,0 +1,32 @@
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP   |         N/A|     5.732ns|     N/A|        3726
+  _BUFGP                                    | HOLD    |     0.772ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mod | SETUP   |         N/A|     8.407ns|     N/A|           0
+  ulo4/reloj4                               | HOLD    |     1.054ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mal | SETUP   |         N/A|     5.191ns|     N/A|           0
+  a                                         | HOLD    |     0.640ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net hal | SETUP   |         N/A|     4.909ns|     N/A|           0
+  a                                         | HOLD    |     0.395ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mod | SETUP   |         N/A|     5.428ns|     N/A|           0
+  ulo7/esti2                                | HOLD    |     0.619ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net mod | SETUP   |         N/A|     6.614ns|     N/A|           0
+  ulo3/relojs                               | HOLD    |     0.821ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+

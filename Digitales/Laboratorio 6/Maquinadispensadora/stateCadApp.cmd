@@ -1,0 +1,4 @@
+-file "C:\Documents and Settings\USER\Mis documentos\David\UNAL\Quinto semestre\Digitales\Laboratorio 6\Maquinadispensadora\StateDiagram.dia"
+-lang vhdl
+-state onehot
+-vend xst

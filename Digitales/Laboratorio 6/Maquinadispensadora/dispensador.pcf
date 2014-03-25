@@ -1,0 +1,27 @@
+//! **************************************************************************
+// Written by: Map K.31 on Thu Nov 04 22:33:53 2010
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "product" LOCATE = SITE "K13" LEVEL 1;
+COMP "clock" LOCATE = SITE "T9" LEVEL 1;
+COMP "a0" LOCATE = SITE "P14" LEVEL 1;
+COMP "a1" LOCATE = SITE "L12" LEVEL 1;
+COMP "bc" LOCATE = SITE "L13" LEVEL 1;
+COMP "bd" LOCATE = SITE "M14" LEVEL 1;
+COMP "bu" LOCATE = SITE "M13" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "D14" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "G14" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "F14" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "E13" LEVEL 1;
+COMP "vis<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "vis<1>" LOCATE = SITE "F13" LEVEL 1;
+COMP "vis<2>" LOCATE = SITE "R16" LEVEL 1;
+COMP "vis<3>" LOCATE = SITE "P15" LEVEL 1;
+COMP "vis<4>" LOCATE = SITE "N15" LEVEL 1;
+COMP "vis<5>" LOCATE = SITE "G13" LEVEL 1;
+COMP "vis<6>" LOCATE = SITE "E14" LEVEL 1;
+COMP "reseteo" LOCATE = SITE "L14" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

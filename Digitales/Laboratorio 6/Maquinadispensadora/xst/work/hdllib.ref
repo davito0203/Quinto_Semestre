@@ -1,0 +1,8 @@
+MO muxvisual NULL muxvisual.v vlg42/muxvisual.bin 1288928014
+MO freq1 NULL freq1.v vlg73/freq1.bin 1289249148
+MO freq2 NULL freq2.v vlg74/freq2.bin 1288928014
+MO dispensador NULL dispensador.v vlg48/dispensador.bin 1288928014
+MO visualizacion NULL visualizacion.v vlg31/visualizacion.bin 1288928014
+MO fsm NULL fsm.v vlg22/fsm.bin 1288928014
+MO debouncer NULL debouncer.v vlg03/debouncer.bin 1288928014
+MO salprodu NULL salprodu.v vlg56/salprodu.bin 1288928014

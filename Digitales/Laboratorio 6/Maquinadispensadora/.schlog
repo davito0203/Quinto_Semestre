@@ -1,0 +1,63 @@
+add instance fjkrse 1120 976 R0 -sn=1
+add instance fjkrse 2128 992 R0 -sn=1
+add instance fjkrse 1584 1888 R0 -sn=1
+add instance fjkrse 736 1936 R0 -sn=1
+add instance fjkpe 320 1968 R0 -sn=1
+add instance fjkp 1152 2176 R0 -sn=1
+add instance fjkce 192 2352 R0 -sn=1
+add instance fjkc 704 2368 R0 -sn=1
+add instance fdse_1 1088 2480 R0 -sn=1
+select figure at 1213 2300 8 -branches -sn=1
+select figure at 1211 2298 8 -branches -sn=1
+delete selection -sn=1
+select figure at 286 2114 8 -branches -sn=1
+select figure at 284 2112 8 -branches -sn=1
+delete selection -sn=1
+select figure at 471 1842 8 -branches -sn=1
+select figure at 469 1840 8 -branches -sn=1
+delete selection -sn=1
+select figure at 901 1764 8 -branches -sn=1
+select figure at 899 1762 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1313 1882 8 -branches -sn=1
+select figure at 1311 1880 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1648 2232 8 -branches -sn=1
+select figure at 1710 1740 8 -branches -sn=1
+select figure at 1708 1736 8 -branches -sn=1
+delete selection -sn=1
+select figure at 1364 754 31 -branches -sn=1
+select figure at 1356 747 31 -branches -sn=1
+delete selection -sn=1
+select figure at 2196 907 31 -branches -sn=1
+select figure at 2196 899 31 -branches -sn=1
+delete selection -sn=1
+select figure at 1394 1587 31 -branches -sn=1
+select all in 486 1579 1387 2488 -branches -enclosed -noattrwin -sn=1
+move instance at 704 2368 to 1600 896 R0 -keepConn -sn=1
+select figure at 1830 1296 31 -branches -sn=1
+select figure at 1822 1289 31 -branches -sn=1
+BeginGroup
+ADD INSTANCE fjkc 576 976 R0 -sn=1
+PASTE NAME INSTANCE AT 768 768 XLXI_8 -NoDuplicateNetNames -sn=1
+EndGroup
+BeginGroup
+ADD INSTANCE fjkc 2592 1072 R0 -sn=1
+PASTE NAME INSTANCE AT 2784 864 XLXI_8 -NoDuplicateNetNames -sn=1
+EndGroup
+select figure at 1097 1709 31 -branches -sn=1
+select figure at 1089 1701 31 -branches -sn=1
+add instance ifd 1136 1824 R0 -sn=1
+select figure at 701 1277 8 -branches -sn=1
+select figure at 699 1275 8 -branches -sn=1
+add instance fddrcpe 704 1472 R0 -sn=1
+select figure at 899 1243 8 -branches -sn=1
+select figure at 897 1241 8 -branches -sn=1
+undo
+undo
+select figure at 991 1208 20 -branches -sn=1
+select figure at 987 1203 20 -branches -sn=1
+delete selection -sn=1
+select figure at 1338 1707 20 -branches -sn=1
+select figure at 1334 1702 20 -branches -sn=1
+delete selection -sn=1

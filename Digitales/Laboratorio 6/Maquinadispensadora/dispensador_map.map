@@ -1,0 +1,68 @@
+Release 10.1 Map K.31 (nt)
+Xilinx Map Application Log File for Design 'dispensador'
+
+Design Information
+------------------
+Command Line   : map -ise "C:/Documents and Settings/USER/Mis
+documentos/David/UNAL/Quinto semestre/Digitales/Laboratorio
+6/Maquinadispensadora/Maquinadispensadora.ise" -intstyle ise -p xc3s200-ft256-5
+-cm area -pr off -k 4 -c 100 -o dispensador_map.ncd dispensador.ngd
+dispensador.pcf 
+Target Device  : xc3s200
+Target Package : ft256
+Target Speed   : -5
+Mapper Version : spartan3 -- $Revision: 1.46 $
+Mapped Date    : Thu Nov 04 22:33:51 2010
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Total Number Slice Registers:         239 out of   3,840    6%
+    Number used as Flip Flops:          231
+    Number used as Latches:               8
+  Number of 4 input LUTs:               197 out of   3,840    5%
+Logic Distribution:
+  Number of occupied Slices:            202 out of   1,920   10%
+    Number of Slices containing only related logic:     202 out of     202 100%
+    Number of Slices containing unrelated logic:          0 out of     202   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         383 out of   3,840    9%
+    Number used as logic:               197
+    Number used as a route-thru:        186
+  Number of bonded IOBs:                 19 out of     173   10%
+    IOB Flip Flops:                       3
+  Number of BUFGMUXs:                     3 out of       8   37%
+
+Peak Memory Usage:  138 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   2 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "dispensador_map.mrp" for details.

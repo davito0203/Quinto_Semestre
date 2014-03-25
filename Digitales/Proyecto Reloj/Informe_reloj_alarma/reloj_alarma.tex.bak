@@ -1,0 +1,161 @@
+%%-------------------------------------------------------------------
+%% Definiciónn del tipo de documento
+%%-------------------------------------------------------------------
+\documentclass[twocolumn]{IEEEtran}
+%%-------------------------------------------------------------------
+%% Paquetes y librerías que se van a cargar
+%%-------------------------------------------------------------------
+\usepackage{graphicx}%manejo de graficos
+\usepackage[latin1]{}% Escritura en castellano con acentos
+\usepackage{times}
+\usepackage{amssymb,amsfonts}
+\usepackage[tbtags]{amsmath}
+\usepackage{cite}
+\usepackage[all]{xy}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[all]{xy}
+\usepackage[centerlast, small]{caption}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+%\usepackage[dvips, pdfstartview=FitH, bookmarks=true,hypertexnames=false, letterpaper,linktocpage,colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+%%-------------------------------------------------------------------
+%% Inicio del documento
+%%-------------------------------------------------------------------
+\begin{document}
+%%-------------------------------------------------------------------
+\title{Reloj Digital Con Alarma implementado en una FPGA}
+%%-------------------------------------------------------------------
+%% Autor y otros datos
+%%-------------------------------------------------------------------
+\author{David Ricardo Martínez Hernández Código: $261931$\\
+        Juan Pablo Rodríguez Rojas Código: $261744$}
+\maketitle
+%%-------------------------------------------------------------------
+\markboth{Universidad Nacional de Colombia}{}
+%%-------------------------------------------------------------------
+%% Otras definciones en español
+%%-------------------------------------------------------------------
+\floatname{algorithm}{Algoritmo}
+%%---------------------------------------------------------
+%% Resumen y Palabras clave
+%%--------------------------------------------------------
+\begin{abstract}
+El reloj con alarma que implementamos es un reloj que funciona con hora definida de $0$ minutos con $0$ horas hasta $23$ horas y $59$ minutos, es decir se denomina una hora militar. Al inicializar el reloj automáticamente se muestra la hora del reloj que por defecto será las $0$ horas con $0$ minutos, mientras no se modifique la hora esa será la hora a la que el reloj se encuentre programado, para modificar esta hora podemos observar la Fig. \ref{fig7} que corresponde a los controladores de la FPGA en la cual se esta presentando la aplicación. Para activar la modificación de la hora activamos el primer switch de derecha a izquierda, aquel que se denomina sw0, luego podremos aumentar los minutos con el primer pulsador de izquierda a derecha, y las horas lo haremos con el pulsador que se encuentra enseguida en ese mismo orden, y así efectuamos la modificación del reloj. Luego para modificar la alarma tendremos que desactivar el switch  que corresponde a la modificación del reloj, y luego procedemos a activar el switch que se encuentra en la primera posición de izquierda a derecha, es decir, el que se denomina sw7, y vemos como cambia la visualización del los displays 7 - segmentos, y veremos la hora a la cual esta programada la alarma, que por defecto se encuentra programada a las 0 horas con 0 minutos. Luego después de activar el sw7, procedemos a modificar la alarma utilizando los mismos pulsadores que utilizamos para modificar la hora del reloj. Y para terminar desactivamos el switch que modifica la alarma, en el momento en que coinciden la hora de la alarma con la hora del reloj observaremos como se prende el primer Led de izquierda a derecha, que observamos en la anterior gráfica, lo que indica que se activo la señal de alarma, esta podrá ser desactivada si se presiona el pulsador que  esta en la primera posición de derecha a izquierda.
+\end{abstract}
+
+\begin{keywords}
+Flanco de bajada, Flanco de subida, Flip-Flops, Frecuencia, Horas, Minutos, Registros, Segundos, Señal de reloj.
+\end{keywords}
+%%---------------------------------------------------------
+%% Cuerpo del trabajo
+%%---------------------------------------------------------
+\section{Objetivos}
+\begin{itemize}
+  \item Utilizar las estrategias de comprensión de análisis de sistemas digitales aprendidas en la clase para solucionar un problema cotidiano.
+  \item Aprender la correcta utilización de los lenguajes HDL para la implementación de los sistemas digitales.
+  \item Manejar los dispositivos programables FPGA para poder implementar más recursivamente, y por supuesto con el fin de facilitar la implementación del proyecto.
+  \item Analizar como los diferentes tipos de descripción secuencial o combinacional, pueden ser utilizados con el fin de describir distintas tareas.
+\end{itemize}
+
+\section{Introducción}
+\noindent
+Por un tiempo prolongado se programo en lenguajes como \textbf{FORTRAN}, \textbf{Pascal} y \textbf{C} en sus inicios se usaron  para la descripción de programas de computadoras haciendo de estos secuenciales por naturaleza.\\
+\textbf{VHDL} viene de \textbf{VHSIC} (\textit{Very Speed Integrated Circuit}), VHDL es un lenguaje de descripción y modelado, diseñado para describir la funcionalidad y la organización de sistemas hardware digitales, placas de circuitos y componentes.\\
+VHDL fue diseñado como en lenguaje para el modelado y simulación lógica de los sistemas digitales, además es un lenguaje con una sintaxis amplia y flexible permitiendo así el modelado estructural, teniendo como objetivo el desarrollo de un modelo para la \textbf{simulación} de un circuito. También permite el diseño Top-Down, permitiendo describir el comportamiento de los bloques de alto nivel, analizándolos y refinando la funcionalidad de alto nivel requerida antes de llegar a niveles más bajos de abstracción de la implementación del diseño\footnote{Texto tomada de \cite{page1}}.\\\\
+Las \textbf{FPGA} (\textit{Field Programmable Gate Array}) (Fig. \ref{fig7}), introducidas por \textbf{Xilinx} en 1985, son el dispositivo programable por el usuario de más general espectro. También se denominan \textbf{LCA} (\textit{Logic Cell Array}). Consisten en una matriz bidimensional de bloques configurables que se pueden conectar mediante recursos generales de interconexión. Estos recursos incluyen segmentos de pista de diferentes longitudes, más unos conmutadores programables para enlazar bloques a pistas o pistas entre sí. En realidad, lo que se programa en una \textbf{FPGA} son los conmutadores que sirven para realizar las conexiones entre los diferentes bloques, más la configuración de los bloques.
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.4]{Figuras/FPGA_Interruptores.png}
+	\caption{Interruptores y Pulsadores FPGA Spartan3}
+	\label{fig7}
+\end{figure}
+\noindent
+Un \textit{\textbf{decodificador}} es un circuito lógico con variables de varias entradas y salidas que convierte las entradas codificadas en salidas codificadas, donde los códigos de entrada son diferentes, en donde el código de entrada tiene generalmente menos bits que el de salida.\footnote{Definición tomada de \cite{wakerly}, \textit{Pág 351}}\\
+Un ejemplo muy común de aplicación de los contadores son los sistemas de control de tiempo, entre los cuales se encuentra \textbf{El Reloj Digital}. El cual presenta la hora en los displays distribuidos de la  siguiente manera (Fig. \ref{fig1}):
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.4]{Figuras/formathm.png}
+	\caption{Formato Hora \cite{floyd}, \tiny{\textit{Pág 594}}}
+	\label{fig1}
+\end{figure}
+\noindent
+Se genera un tren de impulsos a $1$ $Hz$ para tener el control de los segundos, esta señal de reloj actualizara los estados de los contadores. Este circuito se puede implementar por medio de Flip-Flops conectados sincrónicamente.\\
+Los contadores cuentan desde $0$ hasta $59$ y lugo vuelve a $0$ para la etapa de \textit{minutos} y \textit{segundos}, para la etapa de \textit{horas} se implementa por medio del \textbf{Contador de Décadas} contando desde $1$ hasta $12$, o de $0$ hasta $23$ de acuerdo a la configuración del fabricante.\\
+
+
+\section{Materiales y Métodos}
+\noindent
+Para realizar esta práctica se necesito:
+\begin{itemize}
+  \item Computador.
+  \item FPGA.
+  \item Software Xilinx, Inc.
+\end{itemize}
+
+\section{Análisis y Resultados}
+\noindent
+Para este reloj digital se crearon varios módulos cada uno con una tarea especifica, desde controlar el tiempo (señal de reloj) hasta la visualización en los displays. Se crearon $nponerN°modulos$ módulos, los cuales se encuentran a continuación.\\
+\textbf{Modulo $1$}:$ \ \ \ $ explicación\\
+\textbf{Modulo $2$}:$ \ \ \ $ explicación\\
+\textbf{Modulo $3$}:$ \ \ \ $ explicación\\
+\textbf{Modulo $4$}:$ \ \ \ $ explicación\\
+\textbf{Modulo $5$}:$ \ \ \ $ explicación\\
+\textbf{Modulo $6$}:$ \ \ \ $ explicación\\\\
+\noindent
+La simulación del Reloj Digital se encuentra representada el la fig \ref{fig2}
+\\
+Aquí va la figura 2
+\\
+Aquí va la explicación de la simulación
+
+
+\section{Conclusiones}
+\begin{itemize}
+  \item .
+  \item .
+  \item .
+  \item .
+\end{itemize}
+
+
+%%---------------------------------------------------------
+%% Bibliografía
+%%---------------------------------------------------------
+\bibliographystyle{ieeetran}
+\begin{thebibliography}{99}
+
+\bibitem{dorf} Dorf Svoboda.
+{\em "`Circuitos Eléctricos"'}.
+Alfaomega, 2006.
+
+\bibitem{savant} C. J. Savant.
+{\em "`Diseños Electrónicos: Circuitos de Sistema"'}.
+Prentice-Hall, 2006.
+
+\bibitem{wakerly} John F. Wakerly.
+{\em "`Diseño Digital: Principios y Prácticas"'}.
+Prentice-Hall, 2001.
+
+\bibitem{floyd} Thomas L. Floyd.
+{\em "`Fundamentos de Sistemas Digitales"'}.
+Prentice-Hall, 2000.
+
+\bibitem{page1} Sito Web: \url{http://www.jeuazarru.com/docs/VHDL.pdf}
+
+
+\end{thebibliography}
+%%---------------------------------------------------------
+%% Fin del documento
+%%---------------------------------------------------------
+\end{document}

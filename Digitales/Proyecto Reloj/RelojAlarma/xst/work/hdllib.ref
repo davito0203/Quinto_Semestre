@@ -1,0 +1,11 @@
+MO fsmalarm NULL fsmalarm.v vlg37/fsmalarm.bin 1288931703
+MO muxvisual NULL muxvisual.v vlg42/muxvisual.bin 1288931703
+MO RelojCentral NULL RelojCentral.v vlg3D/_reloj_central.bin 1288931703
+MO muxnums NULL muxnums.v vlg3D/muxnums.bin 1288931703
+MO freq1 NULL freq1.v vlg73/freq1.bin 1288931703
+MO freq2 NULL freq2.v vlg74/freq2.bin 1288931703
+MO muxbutones NULL muxbutones.v vlg2A/muxbutones.bin 1288931703
+MO visualizacion NULL visualizacion.v vlg31/visualizacion.bin 1288931703
+MO debouncer NULL debouncer.v vlg03/debouncer.bin 1288931703
+MO sound NULL sound.v vlg6D/sound.bin 1288931703
+MO fsmreloj NULL fsmreloj.v vlg4E/fsmreloj.bin 1288931703

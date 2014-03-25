@@ -1,0 +1,109 @@
+%%-------------------------------------------------------------------
+%% Definición del tipo de documento
+%%-------------------------------------------------------------------
+\documentclass[twocolumn,10pt]{C:/texmf/tex/IEEEtran}  %para usar la libreria en español activa esta línea y desactiva la siguiente
+%\documentclass[twocolumn,jorunal]{IEEEtran}            %para usar la libreria en ingles activa esta línea y desactiva la anterior
+%%-------------------------------------------------------------------
+%% Paquetes y librerías que se van a cargar
+%%-------------------------------------------------------------------
+\usepackage[spanish]{babel,varioref}
+\selectlanguage{spanish}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphics,graphicx,color,colortbl}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[tbtags]{amsmath}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[all]{xy}
+\usepackage[centerlast, small]{caption}
+\usepackage[colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}%\usepackage[dvips, pdfstartview=FitH, bookmarks=true,hypertexnames=false, letterpaper,linktocpage,colorlinks=true, citecolor=blue, linkcolor=blue, urlcolor=blue, breaklinks=true]{hyperref}
+%%-------------------------------------------------------------------
+%% Inicio del documento
+%%-------------------------------------------------------------------
+\begin{document}
+%%-------------------------------------------------------------------
+%% Título
+%%-------------------------------------------------------------------
+\title{Compuertas TTL y CMOS}
+%%-------------------------------------------------------------------
+%% Autor y otros datos
+%%-------------------------------------------------------------------
+\author{David Ricardo Martínez Hernández \\ Código: 261931}
+\maketitle
+
+\markboth{Universidad Nacional de Colombia}{}
+
+%%-------------------------------------------------------------------
+%% Otras definciones en español
+%%-------------------------------------------------------------------
+\floatname{algorithm}{Algoritmo}
+%%---------------------------------------------------------
+%% Resumen y Palabras clave
+%%--------------------------------------------------------
+\begin{abstract}
+.
+\end{abstract}
+
+\begin{keywords}
+ALTO, AND, BAJO, CMOS, Compuerta, NOT, operador lógico, OR, tabla de verdad, TTL, XOR.
+\end{keywords}
+%%---------------------------------------------------------
+%% Cuerpo del trabajo
+%%---------------------------------------------------------
+\section{Introducción}
+\noindent
+La lógica bipolar
+\section{Materiales y Métodos}
+\noindent
+Para desarrollar este laboratorio fue necesaria la utilización de:
+
+\begin{itemize}
+	\item Compuertas AND, NOT, OR, XOR.
+	\item
+\end{itemize}
+
+
+\section{Desarrollo teórico de los circuitos implementados}
+\noindent
+
+\subsection{Simulaciones}
+\noindent
+
+\subsection{Análisis}
+\noindent
+
+\subsection{Resultados}
+\noindent
+
+\section{Conclusiones}
+\begin{itemize}
+	\item .
+\end{itemize}
+\begin{itemize}
+	\item .
+\end{itemize}
+%%---------------------------------------------------------
+%% Bibliografía
+%%---------------------------------------------------------
+\bibliographystyle{ieeetran}
+\begin{thebibliography}{1}
+
+\bibitem{La86} Dorf Svoboda.
+{\em "`Circuitos Eléctricos"'}.
+Alfaomega, 2006.
+\bibitem{La86} C. J. Savant.
+{\em "`Diseños Electrónicos: Circuitos de Sistema"'}.
+Prentice-Hall, 2006.
+
+\end{thebibliography}
+%%---------------------------------------------------------
+%% Fin del documento
+%%---------------------------------------------------------
+\end{document} 

@@ -1,0 +1,858 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Documents and Settings/USER/Mis documentos/David/UNAL/Quinto semestre/Digitales/Laboratorio 6/Maquinadispensadora/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to C:/Documents and Settings/USER/Mis documentos/David/UNAL/Quinto semestre/Digitales/Laboratorio 6/Maquinadispensadora/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: dispensador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "dispensador.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "dispensador"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : dispensador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : dispensador.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "visualizacion.v" in library work
+Compiling verilog file "salprodu.v" in library work
+Module <visualizacion> compiled
+Compiling verilog file "muxvisual.v" in library work
+Module <salprodu> compiled
+Compiling verilog file "fsm.v" in library work
+Module <muxvisual> compiled
+Compiling verilog file "freq2.v" in library work
+Module <fsm> compiled
+Compiling verilog file "freq1.v" in library work
+Module <freq2> compiled
+Compiling verilog file "debouncer.v" in library work
+Module <freq1> compiled
+Compiling verilog file "dispensador.v" in library work
+Module <debouncer> compiled
+Module <dispensador> compiled
+No errors in compilation
+Analysis of file <"dispensador.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <dispensador> in library <work>.
+
+Analyzing hierarchy for module <debouncer> in library <work>.
+
+Analyzing hierarchy for module <freq1> in library <work>.
+
+Analyzing hierarchy for module <freq2> in library <work>.
+
+Analyzing hierarchy for module <salprodu> in library <work>.
+
+Analyzing hierarchy for module <fsm> in library <work> with parameters.
+	s0 = "00000"
+	s1 = "00001"
+	s10 = "01010"
+	s11 = "01011"
+	s12 = "01100"
+	s13 = "01101"
+	s14 = "01110"
+	s15 = "01111"
+	s16 = "10000"
+	s17 = "10001"
+	s18 = "10010"
+	s19 = "10011"
+	s2 = "00010"
+	s20 = "10100"
+	s21 = "10101"
+	s22 = "10110"
+	s23 = "10111"
+	s24 = "11000"
+	s25 = "11001"
+	s26 = "11010"
+	s27 = "11011"
+	s28 = "11100"
+	s29 = "11101"
+	s3 = "00011"
+	s30 = "11110"
+	s31 = "11111"
+	s4 = "00100"
+	s5 = "00101"
+	s6 = "00110"
+	s7 = "00111"
+	s8 = "01000"
+	s9 = "01001"
+
+Analyzing hierarchy for module <muxvisual> in library <work>.
+
+Analyzing hierarchy for module <visualizacion> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <dispensador>.
+Module <dispensador> is correct for synthesis.
+ 
+Analyzing module <debouncer> in library <work>.
+Module <debouncer> is correct for synthesis.
+ 
+Analyzing module <freq1> in library <work>.
+Module <freq1> is correct for synthesis.
+ 
+Analyzing module <freq2> in library <work>.
+Module <freq2> is correct for synthesis.
+ 
+Analyzing module <salprodu> in library <work>.
+Module <salprodu> is correct for synthesis.
+ 
+Analyzing module <fsm> in library <work>.
+	s0 = 5'b00000
+	s1 = 5'b00001
+	s10 = 5'b01010
+	s11 = 5'b01011
+	s12 = 5'b01100
+	s13 = 5'b01101
+	s14 = 5'b01110
+	s15 = 5'b01111
+	s16 = 5'b10000
+	s17 = 5'b10001
+	s18 = 5'b10010
+	s19 = 5'b10011
+	s2 = 5'b00010
+	s20 = 5'b10100
+	s21 = 5'b10101
+	s22 = 5'b10110
+	s23 = 5'b10111
+	s24 = 5'b11000
+	s25 = 5'b11001
+	s26 = 5'b11010
+	s27 = 5'b11011
+	s28 = 5'b11100
+	s29 = 5'b11101
+	s3 = 5'b00011
+	s30 = 5'b11110
+	s31 = 5'b11111
+	s4 = 5'b00100
+	s5 = 5'b00101
+	s6 = 5'b00110
+	s7 = 5'b00111
+	s8 = 5'b01000
+	s9 = 5'b01001
+Module <fsm> is correct for synthesis.
+ 
+Analyzing module <muxvisual> in library <work>.
+Module <muxvisual> is correct for synthesis.
+ 
+Analyzing module <visualizacion> in library <work>.
+Module <visualizacion> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <debouncer>.
+    Related source file is "debouncer.v".
+    Found 1-bit register for signal <p>.
+    Found 1-bit register for signal <clk2>.
+    Found 32-bit up counter for signal <count>.
+    Found 1-bit register for signal <n>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <debouncer> synthesized.
+
+
+Synthesizing Unit <freq1>.
+    Related source file is "freq1.v".
+    Found 1-bit register for signal <relojs>.
+    Found 32-bit up counter for signal <b>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <freq1> synthesized.
+
+
+Synthesizing Unit <freq2>.
+    Related source file is "freq2.v".
+    Found 1-bit register for signal <reloj4>.
+    Found 32-bit up counter for signal <g>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <freq2> synthesized.
+
+
+Synthesizing Unit <salprodu>.
+    Related source file is "salprodu.v".
+Unit <salprodu> synthesized.
+
+
+Synthesizing Unit <fsm>.
+    Related source file is "fsm.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <st> of Case statement line 222 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <st> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:1799 - State 10110 is never reached in FSM <st>.
+INFO:Xst:1799 - State 10111 is never reached in FSM <st>.
+INFO:Xst:1799 - State 11000 is never reached in FSM <st>.
+INFO:Xst:1799 - State 11001 is never reached in FSM <st>.
+INFO:Xst:1799 - State 11010 is never reached in FSM <st>.
+INFO:Xst:1799 - State 11011 is never reached in FSM <st>.
+INFO:Xst:1799 - State 11100 is never reached in FSM <st>.
+INFO:Xst:1799 - State 11101 is never reached in FSM <st>.
+INFO:Xst:1799 - State 11110 is never reached in FSM <st>.
+INFO:Xst:1799 - State 11111 is never reached in FSM <st>.
+    Found finite state machine <FSM_0> for signal <st>.
+    -----------------------------------------------------------------------
+    | States             | 22                                             |
+    | Transitions        | 69                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 22                                             |
+    | Clock              | nclk (rising_edge)                             |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 4-bit latch for signal <h>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 4-bit latch for signal <m1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 4-bit latch for signal <m0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit register for signal <nclk>.
+    Found 1-bit xor4 for signal <nclk$xor0000> created at line 200.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <fsm> synthesized.
+
+
+Synthesizing Unit <muxvisual>.
+    Related source file is "muxvisual.v".
+    Found 4-bit register for signal <numero>.
+    Found 4-bit register for signal <segmentos>.
+    Found 32-bit register for signal <d>.
+    Found 32-bit adder for signal <old_d_1$addsub0000> created at line 50.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <muxvisual> synthesized.
+
+
+Synthesizing Unit <visualizacion>.
+    Related source file is "visualizacion.v".
+    Found 16x7-bit ROM for signal <visual>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <visualizacion> synthesized.
+
+
+Synthesizing Unit <dispensador>.
+    Related source file is "dispensador.v".
+Unit <dispensador> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 5
+ 32-bit up counter                                     : 5
+# Registers                                            : 15
+ 1-bit register                                        : 12
+ 32-bit register                                       : 1
+ 4-bit register                                        : 2
+# Latches                                              : 3
+ 4-bit latch                                           : 3
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <modulo7/st/FSM> on signal <st[1:22]> with one-hot encoding.
+---------------------------------
+ State | Encoding
+---------------------------------
+ 00000 | 0000000000000000000001
+ 00001 | 0000000000000000000010
+ 00010 | 0000000000000000000100
+ 00011 | 0000000000000000001000
+ 00100 | 0000000000000000010000
+ 00101 | 0000000000000000100000
+ 00110 | 0000000000000001000000
+ 00111 | 0000000000000010000000
+ 01000 | 0000000000001000000000
+ 01001 | 0000000000000100000000
+ 01010 | 0000000000010000000000
+ 01011 | 0000000001000000000000
+ 01100 | 0000000000100000000000
+ 01101 | 0000000100000000000000
+ 01110 | 0000000010000000000000
+ 01111 | 0000010000000000000000
+ 10000 | 0000001000000000000000
+ 10001 | 0000100000000000000000
+ 10010 | 0010000000000000000000
+ 10011 | 0001000000000000000000
+ 10100 | 0100000000000000000000
+ 10101 | 1000000000000000000000
+ 10110 | unreached
+ 10111 | unreached
+ 11000 | unreached
+ 11001 | unreached
+ 11010 | unreached
+ 11011 | unreached
+ 11100 | unreached
+ 11101 | unreached
+ 11110 | unreached
+ 11111 | unreached
+---------------------------------
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx\10.1\ISE.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 5
+ 32-bit up counter                                     : 5
+# Registers                                            : 74
+ Flip-Flops                                            : 74
+# Latches                                              : 3
+ 4-bit latch                                           : 3
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <m1_1> in Unit <fsm> is equivalent to the following 3 FFs/Latches, which will be removed : <m1_2> <m1_3> <h_3> 
+WARNING:Xst:1710 - FF/Latch <m1_1> (without init value) has a constant value of 0 in block <fsm>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <dispensador> ...
+
+Optimizing unit <muxvisual> ...
+
+Optimizing unit <fsm> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block dispensador, actual ratio is 10.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 234
+ Flip-Flops                                            : 234
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : dispensador.ngr
+Top Level Output File Name         : dispensador
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 830
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 186
+#      LUT2                        : 43
+#      LUT3                        : 24
+#      LUT4                        : 120
+#      MUXCY                       : 248
+#      MUXF5                       : 10
+#      VCC                         : 1
+#      XORCY                       : 186
+# FlipFlops/Latches                : 242
+#      FD                          : 39
+#      FDE                         : 13
+#      FDR                         : 174
+#      FDRS                        : 7
+#      FDS                         : 1
+#      LD                          : 8
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 5
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                      198  out of   1920    10%  
+ Number of Slice Flip Flops:            239  out of   3840     6%  
+ Number of 4 input LUTs:                384  out of   3840    10%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    173    10%  
+    IOB Flip Flops:                       3
+ Number of GCLKs:                         3  out of      8    37%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------+------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)  | Load  |
+---------------------------------------------+------------------------+-------+
+modulo3/clk2                                 | NONE(modulo3/p)        | 1     |
+clock                                        | BUFGP                  | 169   |
+modulo2/clk2                                 | NONE(modulo2/p)        | 1     |
+modulo1/clk2                                 | NONE(modulo1/p)        | 1     |
+modulo5/reloj41                              | BUFG                   | 40    |
+modulo7/nclk1                                | BUFG                   | 22    |
+modulo7/h_or0000(modulo7/h_or0000_wg_cy<5>:O)| NONE(*)(modulo7/h_2)   | 8     |
+---------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.470ns (Maximum Frequency: 105.593MHz)
+   Minimum input arrival time before clock: 4.294ns
+   Maximum output required time after clock: 8.224ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 5.631ns (frequency: 177.590MHz)
+  Total number of paths / destination ports: 7929 / 334
+-------------------------------------------------------------------------
+Delay:               5.631ns (Levels of Logic = 9)
+  Source:            modulo2/count_8 (FF)
+  Destination:       modulo2/count_0 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: modulo2/count_8 to modulo2/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.626   1.040  modulo2/count_8 (modulo2/count_8)
+     LUT4:I0->O            1   0.479   0.000  modulo2/count_cmp_eq0000_wg_lut<0> (modulo2/count_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  modulo2/count_cmp_eq0000_wg_cy<0> (modulo2/count_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  modulo2/count_cmp_eq0000_wg_cy<1> (modulo2/count_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  modulo2/count_cmp_eq0000_wg_cy<2> (modulo2/count_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  modulo2/count_cmp_eq0000_wg_cy<3> (modulo2/count_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  modulo2/count_cmp_eq0000_wg_cy<4> (modulo2/count_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  modulo2/count_cmp_eq0000_wg_cy<5> (modulo2/count_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  modulo2/count_cmp_eq0000_wg_cy<6> (modulo2/count_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.246   1.580  modulo2/count_cmp_eq0000_wg_cy<7> (modulo2/count_cmp_eq0000)
+     FDR:R                     0.892          modulo2/count_0
+    ----------------------------------------
+    Total                      5.631ns (3.011ns logic, 2.620ns route)
+                                       (53.5% logic, 46.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'modulo5/reloj41'
+  Clock period: 9.470ns (frequency: 105.593MHz)
+  Total number of paths / destination ports: 9233 / 48
+-------------------------------------------------------------------------
+Delay:               9.470ns (Levels of Logic = 30)
+  Source:            modulo8/d_1 (FF)
+  Destination:       modulo8/segmentos_3 (FF)
+  Source Clock:      modulo5/reloj41 rising
+  Destination Clock: modulo5/reloj41 rising
+
+  Data Path: modulo8/d_1 to modulo8/segmentos_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.626   1.040  modulo8/d_1 (modulo8/d_1)
+     LUT1:I0->O            1   0.479   0.000  modulo8/Madd_old_d_1_addsub0000_cy<1>_rt (modulo8/Madd_old_d_1_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.435   0.000  modulo8/Madd_old_d_1_addsub0000_cy<1> (modulo8/Madd_old_d_1_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<2> (modulo8/Madd_old_d_1_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<3> (modulo8/Madd_old_d_1_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<4> (modulo8/Madd_old_d_1_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<5> (modulo8/Madd_old_d_1_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<6> (modulo8/Madd_old_d_1_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<7> (modulo8/Madd_old_d_1_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<8> (modulo8/Madd_old_d_1_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<9> (modulo8/Madd_old_d_1_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<10> (modulo8/Madd_old_d_1_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<11> (modulo8/Madd_old_d_1_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<12> (modulo8/Madd_old_d_1_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<13> (modulo8/Madd_old_d_1_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<14> (modulo8/Madd_old_d_1_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<15> (modulo8/Madd_old_d_1_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<16> (modulo8/Madd_old_d_1_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<17> (modulo8/Madd_old_d_1_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<18> (modulo8/Madd_old_d_1_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/Madd_old_d_1_addsub0000_cy<19> (modulo8/Madd_old_d_1_addsub0000_cy<19>)
+     XORCY:CI->O           2   0.786   1.040  modulo8/Madd_old_d_1_addsub0000_xor<20> (modulo8/old_d_1_addsub0000<20>)
+     LUT2:I0->O            1   0.479   0.704  modulo8/numero_and0000_wg_lut<1>_SW0 (N41)
+     LUT4:I3->O            1   0.479   0.000  modulo8/numero_and0000_wg_lut<1> (modulo8/numero_and0000_wg_lut<1>)
+     MUXCY:S->O            1   0.435   0.000  modulo8/numero_and0000_wg_cy<1> (modulo8/numero_and0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/numero_and0000_wg_cy<2> (modulo8/numero_and0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/numero_and0000_wg_cy<3> (modulo8/numero_and0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/numero_and0000_wg_cy<4> (modulo8/numero_and0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/numero_and0000_wg_cy<5> (modulo8/numero_and0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  modulo8/numero_and0000_wg_cy<6> (modulo8/numero_and0000_wg_cy<6>)
+     MUXCY:CI->O           8   0.245   0.921  modulo8/numero_and0000_wg_cy<7> (modulo8/numero_and0000)
+     FDE:CE                    0.524          modulo8/segmentos_3
+    ----------------------------------------
+    Total                      9.470ns (5.765ns logic, 3.705ns route)
+                                       (60.9% logic, 39.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'modulo7/nclk1'
+  Clock period: 3.948ns (frequency: 253.293MHz)
+  Total number of paths / destination ports: 73 / 29
+-------------------------------------------------------------------------
+Delay:               3.948ns (Levels of Logic = 2)
+  Source:            modulo7/st_FSM_FFd1 (FF)
+  Destination:       modulo7/st_FSM_FFd22 (FF)
+  Source Clock:      modulo7/nclk1 rising
+  Destination Clock: modulo7/nclk1 rising
+
+  Data Path: modulo7/st_FSM_FFd1 to modulo7/st_FSM_FFd22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.626   1.148  modulo7/st_FSM_FFd1 (modulo7/st_FSM_FFd1)
+     LUT4:I0->O            2   0.479   1.040  modulo7/nclk_or00004 (modulo7/nclk_or00004)
+     LUT3:I0->O            1   0.479   0.000  modulo7/st_FSM_FFd22-In23 (modulo7/st_FSM_FFd22-In)
+     FDS:D                     0.176          modulo7/st_FSM_FFd22
+    ----------------------------------------
+    Total                      3.948ns (1.760ns logic, 2.188ns route)
+                                       (44.6% logic, 55.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'modulo3/clk2'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.572ns (Levels of Logic = 1)
+  Source:            bc (PAD)
+  Destination:       modulo3/p (FF)
+  Destination Clock: modulo3/clk2 rising
+
+  Data Path: bc to modulo3/p
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.681  bc_IBUF (bc_IBUF)
+     FD:D                      0.176          modulo3/p
+    ----------------------------------------
+    Total                      1.572ns (0.891ns logic, 0.681ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'modulo2/clk2'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.572ns (Levels of Logic = 1)
+  Source:            bd (PAD)
+  Destination:       modulo2/p (FF)
+  Destination Clock: modulo2/clk2 rising
+
+  Data Path: bd to modulo2/p
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.681  bd_IBUF (bd_IBUF)
+     FD:D                      0.176          modulo2/p
+    ----------------------------------------
+    Total                      1.572ns (0.891ns logic, 0.681ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'modulo1/clk2'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.572ns (Levels of Logic = 1)
+  Source:            bu (PAD)
+  Destination:       modulo1/p (FF)
+  Destination Clock: modulo1/clk2 rising
+
+  Data Path: bu to modulo1/p
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.681  bu_IBUF (bu_IBUF)
+     FD:D                      0.176          modulo1/p
+    ----------------------------------------
+    Total                      1.572ns (0.891ns logic, 0.681ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'modulo7/nclk1'
+  Total number of paths / destination ports: 36 / 35
+-------------------------------------------------------------------------
+Offset:              3.053ns (Levels of Logic = 1)
+  Source:            reseteo (PAD)
+  Destination:       modulo7/st_FSM_FFd22 (FF)
+  Destination Clock: modulo7/nclk1 rising
+
+  Data Path: reseteo to modulo7/st_FSM_FFd22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   0.715   1.446  reseteo_IBUF (reseteo_IBUF)
+     FDR:R                     0.892          modulo7/st_FSM_FFd3
+    ----------------------------------------
+    Total                      3.053ns (1.607ns logic, 1.446ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.294ns (Levels of Logic = 3)
+  Source:            reseteo (PAD)
+  Destination:       modulo7/nclk (FF)
+  Destination Clock: clock rising
+
+  Data Path: reseteo to modulo7/nclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            23   0.715   1.741  reseteo_IBUF (reseteo_IBUF)
+     LUT4:I0->O            1   0.479   0.704  modulo7/nclk_mux0000_SW1 (N55)
+     LUT4:I3->O            1   0.479   0.000  modulo7/nclk_mux0000 (modulo7/nclk_mux0000)
+     FD:D                      0.176          modulo7/nclk
+    ----------------------------------------
+    Total                      4.294ns (1.849ns logic, 2.445ns route)
+                                       (43.1% logic, 56.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'modulo5/reloj41'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.717ns (Levels of Logic = 3)
+  Source:            product (PAD)
+  Destination:       modulo8/numero_0 (FF)
+  Destination Clock: modulo5/reloj41 rising
+
+  Data Path: product to modulo8/numero_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   0.715   1.033  product_IBUF (product_IBUF)
+     LUT4:I3->O            1   0.479   0.000  modulo8/numero_mux0000<0>601_G (N66)
+     MUXF5:I1->O           1   0.314   0.000  modulo8/numero_mux0000<0>601 (modulo8/numero_mux0000<0>60)
+     FDE:D                     0.176          modulo8/numero_0
+    ----------------------------------------
+    Total                      2.717ns (1.684ns logic, 1.033ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'modulo7/nclk1'
+  Total number of paths / destination ports: 10 / 2
+-------------------------------------------------------------------------
+Offset:              8.224ns (Levels of Logic = 3)
+  Source:            modulo7/st_FSM_FFd5 (FF)
+  Destination:       a1 (PAD)
+  Source Clock:      modulo7/nclk1 rising
+
+  Data Path: modulo7/st_FSM_FFd5 to a1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.626   1.216  modulo7/st_FSM_FFd5 (modulo7/st_FSM_FFd5)
+     LUT4:I0->O            1   0.479   0.000  modulo7/b11 (modulo7/b1)
+     MUXF5:I0->O           1   0.314   0.681  modulo7/b1_f5 (a1_OBUF)
+     OBUF:I->O                 4.909          a1_OBUF (a1)
+    ----------------------------------------
+    Total                      8.224ns (6.328ns logic, 1.896ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'modulo5/reloj41'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              7.896ns (Levels of Logic = 2)
+  Source:            modulo8/numero_0 (FF)
+  Destination:       vis<6> (PAD)
+  Source Clock:      modulo5/reloj41 rising
+
+  Data Path: modulo8/numero_0 to vis<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.626   1.201  modulo8/numero_0 (modulo8/numero_0)
+     LUT4:I0->O            1   0.479   0.681  modulo9/Mrom_visual21 (modulo9/Mrom_visual2)
+     OBUF:I->O                 4.909          vis_2_OBUF (vis<2>)
+    ----------------------------------------
+    Total                      7.896ns (6.014ns logic, 1.882ns route)
+                                       (76.2% logic, 23.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.38 secs
+ 
+--> 
+
+Total memory usage is 150844 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :   16 (   0 filtered)
+

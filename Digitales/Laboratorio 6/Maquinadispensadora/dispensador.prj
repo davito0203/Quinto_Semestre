@@ -1,0 +1,8 @@
+verilog work "visualizacion.v"
+verilog work "salprodu.v"
+verilog work "muxvisual.v"
+verilog work "fsm.v"
+verilog work "freq2.v"
+verilog work "freq1.v"
+verilog work "debouncer.v"
+verilog work "dispensador.v"

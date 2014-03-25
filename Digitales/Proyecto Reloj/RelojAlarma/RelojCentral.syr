@@ -1,0 +1,795 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Documents and Settings/USER/Escritorio/RelojAlarma/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to C:/Documents and Settings/USER/Escritorio/RelojAlarma/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Reading design: RelojCentral.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RelojCentral.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RelojCentral"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : RelojCentral
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : RelojCentral.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "visualizacion.v" in library work
+Compiling verilog file "sound.v" in library work
+Module <visualizacion> compiled
+Compiling verilog file "muxvisual.v" in library work
+Module <sound> compiled
+Compiling verilog file "muxnums.v" in library work
+Module <muxvisual> compiled
+Compiling verilog file "muxbutones.v" in library work
+Module <muxnums> compiled
+Compiling verilog file "fsmreloj.v" in library work
+Module <muxbutones> compiled
+Compiling verilog file "fsmalarm.v" in library work
+Module <fsmreloj> compiled
+Compiling verilog file "freq2.v" in library work
+Module <fsmalarm> compiled
+Compiling verilog file "freq1.v" in library work
+Module <freq2> compiled
+Compiling verilog file "debouncer.v" in library work
+Module <freq1> compiled
+Compiling verilog file "RelojCentral.v" in library work
+Module <debouncer> compiled
+Module <RelojCentral> compiled
+No errors in compilation
+Analysis of file <"RelojCentral.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <RelojCentral> in library <work>.
+
+Analyzing hierarchy for module <debouncer> in library <work>.
+
+Analyzing hierarchy for module <freq1> in library <work>.
+
+Analyzing hierarchy for module <freq2> in library <work>.
+
+Analyzing hierarchy for module <muxbutones> in library <work>.
+
+Analyzing hierarchy for module <fsmalarm> in library <work>.
+
+Analyzing hierarchy for module <fsmreloj> in library <work>.
+
+Analyzing hierarchy for module <muxnums> in library <work>.
+
+Analyzing hierarchy for module <sound> in library <work>.
+
+Analyzing hierarchy for module <muxvisual> in library <work>.
+
+Analyzing hierarchy for module <visualizacion> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <RelojCentral>.
+Module <RelojCentral> is correct for synthesis.
+ 
+Analyzing module <debouncer> in library <work>.
+Module <debouncer> is correct for synthesis.
+ 
+Analyzing module <freq1> in library <work>.
+Module <freq1> is correct for synthesis.
+ 
+Analyzing module <freq2> in library <work>.
+Module <freq2> is correct for synthesis.
+ 
+Analyzing module <muxbutones> in library <work>.
+Module <muxbutones> is correct for synthesis.
+ 
+Analyzing module <fsmalarm> in library <work>.
+Module <fsmalarm> is correct for synthesis.
+ 
+Analyzing module <fsmreloj> in library <work>.
+Module <fsmreloj> is correct for synthesis.
+ 
+Analyzing module <muxnums> in library <work>.
+Module <muxnums> is correct for synthesis.
+ 
+Analyzing module <sound> in library <work>.
+Module <sound> is correct for synthesis.
+ 
+Analyzing module <muxvisual> in library <work>.
+Module <muxvisual> is correct for synthesis.
+ 
+Analyzing module <visualizacion> in library <work>.
+Module <visualizacion> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <debouncer>.
+    Related source file is "debouncer.v".
+    Found 1-bit register for signal <p>.
+    Found 1-bit register for signal <clk2>.
+    Found 32-bit up counter for signal <count>.
+    Found 1-bit register for signal <n>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 D-type flip-flop(s).
+Unit <debouncer> synthesized.
+
+
+Synthesizing Unit <freq1>.
+    Related source file is "freq1.v".
+    Found 1-bit register for signal <relojs>.
+    Found 32-bit up counter for signal <b>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <freq1> synthesized.
+
+
+Synthesizing Unit <freq2>.
+    Related source file is "freq2.v".
+    Found 1-bit register for signal <reloj4>.
+    Found 32-bit up counter for signal <g>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <freq2> synthesized.
+
+
+Synthesizing Unit <muxbutones>.
+    Related source file is "muxbutones.v".
+Unit <muxbutones> synthesized.
+
+
+Synthesizing Unit <fsmalarm>.
+    Related source file is "fsmalarm.v".
+    Found 4-bit up counter for signal <d0>.
+    Found 4-bit up counter for signal <d1>.
+    Found 4-bit up counter for signal <d2>.
+    Found 4-bit up counter for signal <d3>.
+    Summary:
+	inferred   4 Counter(s).
+Unit <fsmalarm> synthesized.
+
+
+Synthesizing Unit <fsmreloj>.
+    Related source file is "fsmreloj.v".
+    Found 4-bit up counter for signal <e0>.
+    Found 4-bit up counter for signal <e1>.
+    Found 4-bit up counter for signal <e2>.
+    Found 4-bit up counter for signal <e3>.
+    Found 1-bit register for signal <i>.
+    Summary:
+	inferred   4 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <fsmreloj> synthesized.
+
+
+Synthesizing Unit <muxnums>.
+    Related source file is "muxnums.v".
+Unit <muxnums> synthesized.
+
+
+Synthesizing Unit <sound>.
+    Related source file is "sound.v".
+    Found 1-bit register for signal <sig>.
+    Found 4-bit comparator equal for signal <sig$cmp_eq0000> created at line 43.
+    Found 4-bit comparator equal for signal <sig$cmp_eq0001> created at line 43.
+    Found 4-bit comparator equal for signal <sig$cmp_eq0002> created at line 43.
+    Found 4-bit comparator equal for signal <sig$cmp_eq0003> created at line 43.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <sound> synthesized.
+
+
+Synthesizing Unit <muxvisual>.
+    Related source file is "muxvisual.v".
+    Found 4-bit register for signal <numero>.
+    Found 4-bit register for signal <segmentos>.
+    Found 32-bit register for signal <d>.
+    Found 32-bit adder for signal <old_d_1$addsub0000> created at line 50.
+    Summary:
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <muxvisual> synthesized.
+
+
+Synthesizing Unit <visualizacion>.
+    Related source file is "visualizacion.v".
+    Found 16x7-bit ROM for signal <visual>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <visualizacion> synthesized.
+
+
+Synthesizing Unit <RelojCentral>.
+    Related source file is "RelojCentral.v".
+Unit <RelojCentral> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 12
+ 32-bit up counter                                     : 4
+ 4-bit up counter                                      : 8
+# Registers                                            : 13
+ 1-bit register                                        : 10
+ 32-bit register                                       : 1
+ 4-bit register                                        : 2
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\Xilinx\10.1\ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 12
+ 32-bit up counter                                     : 4
+ 4-bit up counter                                      : 8
+# Registers                                            : 50
+ Flip-Flops                                            : 50
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <RelojCentral> ...
+
+Optimizing unit <muxvisual> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block RelojCentral, actual ratio is 3.
+FlipFlop modulo10/d_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 211
+ Flip-Flops                                            : 211
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : RelojCentral.ngr
+Top Level Output File Name         : RelojCentral
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 18
+
+Cell Usage :
+# BELS                             : 719
+#      GND                         : 1
+#      INV                         : 17
+#      LUT1                        : 155
+#      LUT2                        : 48
+#      LUT3                        : 20
+#      LUT4                        : 102
+#      MUXCY                       : 211
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 155
+# FlipFlops/Latches                : 211
+#      FD                          : 37
+#      FDE                         : 13
+#      FDR                         : 145
+#      FDRE                        : 16
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 5
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      173  out of   4656     3%  
+ Number of Slice Flip Flops:            209  out of   9312     2%  
+ Number of 4 input LUTs:                342  out of   9312     3%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
+    IOB Flip Flops:                       2
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+modulo2/clk2                       | NONE(modulo2/p)        | 1     |
+clk                                | BUFGP                  | 134   |
+modulo1/clk2                       | NONE(modulo1/p)        | 1     |
+modulo7/esti1(modulo7/esti11:O)    | NONE(*)(modulo7/i)     | 9     |
+modulo3/relojs                     | NONE(modulo9/sig)      | 1     |
+hala(modulo5/horala1:O)            | NONE(*)(modulo6/d3_0)  | 8     |
+mala(modulo5/minala1:O)            | NONE(*)(modulo6/d1_0)  | 8     |
+modulo7/esti2(modulo7/esti21:O)    | NONE(*)(modulo7/e3_0)  | 8     |
+modulo4/reloj41                    | BUFG                   | 41    |
+-----------------------------------+------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.880ns (Maximum Frequency: 126.898MHz)
+   Minimum input arrival time before clock: 3.870ns
+   Maximum output required time after clock: 5.406ns
+   Maximum combinational path delay: 5.670ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.528ns (frequency: 220.868MHz)
+  Total number of paths / destination ports: 6342 / 266
+-------------------------------------------------------------------------
+Delay:               4.528ns (Levels of Logic = 9)
+  Source:            modulo1/count_8 (FF)
+  Destination:       modulo1/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: modulo1/count_8 to modulo1/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.532  modulo1/count_8 (modulo1/count_8)
+     LUT4:I0->O            1   0.612   0.000  modulo1/count_cmp_eq0000_wg_lut<0> (modulo1/count_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  modulo1/count_cmp_eq0000_wg_cy<0> (modulo1/count_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  modulo1/count_cmp_eq0000_wg_cy<1> (modulo1/count_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  modulo1/count_cmp_eq0000_wg_cy<2> (modulo1/count_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  modulo1/count_cmp_eq0000_wg_cy<3> (modulo1/count_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  modulo1/count_cmp_eq0000_wg_cy<4> (modulo1/count_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  modulo1/count_cmp_eq0000_wg_cy<5> (modulo1/count_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  modulo1/count_cmp_eq0000_wg_cy<6> (modulo1/count_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.289   1.073  modulo1/count_cmp_eq0000_wg_cy<7> (modulo1/count_cmp_eq0000)
+     FDR:R                     0.795          modulo1/count_0
+    ----------------------------------------
+    Total                      4.528ns (2.923ns logic, 1.605ns route)
+                                       (64.5% logic, 35.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'modulo7/esti1'
+  Clock period: 4.604ns (frequency: 217.181MHz)
+  Total number of paths / destination ports: 92 / 22
+-------------------------------------------------------------------------
+Delay:               4.604ns (Levels of Logic = 2)
+  Source:            modulo7/e0_0 (FF)
+  Destination:       modulo7/e1_0 (FF)
+  Source Clock:      modulo7/esti1 rising
+  Destination Clock: modulo7/esti1 rising
+
+  Data Path: modulo7/e0_0 to modulo7/e1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              7   0.514   0.754  modulo7/e0_0 (modulo7/e0_0)
+     LUT4:I0->O           10   0.612   0.819  modulo7/e0_cmp_eq00001 (modulo7/e0_cmp_eq0000)
+     LUT2:I1->O            4   0.612   0.499  modulo7/e1_and00001 (modulo7/e1_and0000)
+     FDRE:R                    0.795          modulo7/e1_0
+    ----------------------------------------
+    Total                      4.604ns (2.533ns logic, 2.071ns route)
+                                       (55.0% logic, 45.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hala'
+  Clock period: 4.517ns (frequency: 221.364MHz)
+  Total number of paths / destination ports: 116 / 20
+-------------------------------------------------------------------------
+Delay:               4.517ns (Levels of Logic = 2)
+  Source:            modulo6/d2_0 (FF)
+  Destination:       modulo6/d2_0 (FF)
+  Source Clock:      hala rising
+  Destination Clock: hala rising
+
+  Data Path: modulo6/d2_0 to modulo6/d2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.514   0.795  modulo6/d2_0 (modulo6/d2_0)
+     LUT4:I0->O            5   0.612   0.690  modulo6/d3_cmp_eq00001 (modulo6/d3_cmp_eq0000)
+     LUT3:I0->O            4   0.612   0.499  modulo6/d2_or00001 (modulo6/d2_or0000)
+     FDR:R                     0.795          modulo6/d2_0
+    ----------------------------------------
+    Total                      4.517ns (2.533ns logic, 1.984ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'mala'
+  Clock period: 4.661ns (frequency: 214.551MHz)
+  Total number of paths / destination ports: 84 / 20
+-------------------------------------------------------------------------
+Delay:               4.661ns (Levels of Logic = 3)
+  Source:            modulo6/d0_3 (FF)
+  Destination:       modulo6/d1_0 (FF)
+  Source Clock:      mala rising
+  Destination Clock: mala rising
+
+  Data Path: modulo6/d0_3 to modulo6/d1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.514   0.651  modulo6/d0_3 (modulo6/d0_3)
+     LUT4:I0->O            9   0.612   0.700  modulo6/d0_cmp_eq00001 (modulo6/d0_cmp_eq0000)
+     LUT4:I3->O            1   0.612   0.000  modulo6/d1_and00001 (modulo6/d1_and00001)
+     MUXF5:I0->O           4   0.278   0.499  modulo6/d1_and0000_f5 (modulo6/d1_and0000)
+     FDRE:R                    0.795          modulo6/d1_0
+    ----------------------------------------
+    Total                      4.661ns (2.811ns logic, 1.850ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'modulo7/esti2'
+  Clock period: 4.412ns (frequency: 226.652MHz)
+  Total number of paths / destination ports: 116 / 20
+-------------------------------------------------------------------------
+Delay:               4.412ns (Levels of Logic = 2)
+  Source:            modulo7/e2_3 (FF)
+  Destination:       modulo7/e2_0 (FF)
+  Source Clock:      modulo7/esti2 rising
+  Destination Clock: modulo7/esti2 rising
+
+  Data Path: modulo7/e2_3 to modulo7/e2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.514   0.690  modulo7/e2_3 (modulo7/e2_3)
+     LUT4:I0->O            5   0.612   0.690  modulo7/e3_cmp_eq00001 (modulo7/e3_cmp_eq0000)
+     LUT3:I0->O            4   0.612   0.499  modulo7/e2_or00001 (modulo7/e2_or0000)
+     FDR:R                     0.795          modulo7/e2_0
+    ----------------------------------------
+    Total                      4.412ns (2.533ns logic, 1.879ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'modulo4/reloj41'
+  Clock period: 7.880ns (frequency: 126.898MHz)
+  Total number of paths / destination ports: 9405 / 49
+-------------------------------------------------------------------------
+Delay:               7.880ns (Levels of Logic = 30)
+  Source:            modulo10/d_1 (FF)
+  Destination:       modulo10/segmentos_3 (FF)
+  Source Clock:      modulo4/reloj41 rising
+  Destination Clock: modulo4/reloj41 rising
+
+  Data Path: modulo10/d_1 to modulo10/segmentos_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.514   0.532  modulo10/d_1 (modulo10/d_1)
+     LUT1:I0->O            1   0.612   0.000  modulo10/Madd_old_d_1_addsub0000_cy<1>_rt (modulo10/Madd_old_d_1_addsub0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  modulo10/Madd_old_d_1_addsub0000_cy<1> (modulo10/Madd_old_d_1_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<2> (modulo10/Madd_old_d_1_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<3> (modulo10/Madd_old_d_1_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<4> (modulo10/Madd_old_d_1_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<5> (modulo10/Madd_old_d_1_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<6> (modulo10/Madd_old_d_1_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<7> (modulo10/Madd_old_d_1_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<8> (modulo10/Madd_old_d_1_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<9> (modulo10/Madd_old_d_1_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<10> (modulo10/Madd_old_d_1_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<11> (modulo10/Madd_old_d_1_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<12> (modulo10/Madd_old_d_1_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<13> (modulo10/Madd_old_d_1_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<14> (modulo10/Madd_old_d_1_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<15> (modulo10/Madd_old_d_1_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<16> (modulo10/Madd_old_d_1_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<17> (modulo10/Madd_old_d_1_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<18> (modulo10/Madd_old_d_1_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/Madd_old_d_1_addsub0000_cy<19> (modulo10/Madd_old_d_1_addsub0000_cy<19>)
+     XORCY:CI->O           2   0.699   0.532  modulo10/Madd_old_d_1_addsub0000_xor<20> (modulo10/old_d_1_addsub0000<20>)
+     LUT2:I0->O            1   0.612   0.360  modulo10/numero_and0000_wg_lut<1>_SW0 (N25)
+     LUT4:I3->O            1   0.612   0.000  modulo10/numero_and0000_wg_lut<1> (modulo10/numero_and0000_wg_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  modulo10/numero_and0000_wg_cy<1> (modulo10/numero_and0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/numero_and0000_wg_cy<2> (modulo10/numero_and0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/numero_and0000_wg_cy<3> (modulo10/numero_and0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/numero_and0000_wg_cy<4> (modulo10/numero_and0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/numero_and0000_wg_cy<5> (modulo10/numero_and0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  modulo10/numero_and0000_wg_cy<6> (modulo10/numero_and0000_wg_cy<6>)
+     MUXCY:CI->O           8   0.289   0.643  modulo10/numero_and0000_wg_cy<7> (modulo10/numero_and0000)
+     FDE:CE                    0.483          modulo10/segmentos_3
+    ----------------------------------------
+    Total                      7.880ns (5.813ns logic, 2.067ns route)
+                                       (73.8% logic, 26.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'modulo2/clk2'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            hora (PAD)
+  Destination:       modulo2/p (FF)
+  Destination Clock: modulo2/clk2 rising
+
+  Data Path: hora to modulo2/p
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  hora_IBUF (hora_IBUF)
+     FD:D                      0.268          modulo2/p
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'modulo1/clk2'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            minutos (PAD)
+  Destination:       modulo1/p (FF)
+  Destination Clock: modulo1/clk2 rising
+
+  Data Path: minutos to modulo1/p
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  minutos_IBUF (minutos_IBUF)
+     FD:D                      0.268          modulo1/p
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'modulo4/reloj41'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              3.870ns (Levels of Logic = 3)
+  Source:            alarma (PAD)
+  Destination:       modulo10/numero_3 (FF)
+  Destination Clock: modulo4/reloj41 rising
+
+  Data Path: alarma to modulo10/numero_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.106   0.817  alarma_IBUF (alarma_IBUF)
+     MUXF5:S->O            1   0.641   0.426  modulo10/numero_mux0000<3>1431_SW0 (N31)
+     LUT4:I1->O            1   0.612   0.000  modulo10/numero_mux0000<3>1431 (modulo10/numero_mux0000<3>143)
+     FDE:D                     0.268          modulo10/numero_3
+    ----------------------------------------
+    Total                      3.870ns (2.627ns logic, 1.243ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'modulo3/relojs'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.161ns (Levels of Logic = 2)
+  Source:            modulo9/sig (FF)
+  Destination:       sonido (PAD)
+  Source Clock:      modulo3/relojs rising
+
+  Data Path: modulo9/sig to sonido
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.514   0.509  modulo9/sig (modulo9/sig)
+     LUT2:I0->O            1   0.612   0.357  modulo9/son1 (sonido_OBUF)
+     OBUF:I->O                 3.169          sonido_OBUF (sonido)
+    ----------------------------------------
+    Total                      5.161ns (4.295ns logic, 0.866ns route)
+                                       (83.2% logic, 16.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'modulo4/reloj41'
+  Total number of paths / destination ports: 32 / 11
+-------------------------------------------------------------------------
+Offset:              5.406ns (Levels of Logic = 2)
+  Source:            modulo10/numero_1 (FF)
+  Destination:       vis<6> (PAD)
+  Source Clock:      modulo4/reloj41 rising
+
+  Data Path: modulo10/numero_1 to vis<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.514   0.754  modulo10/numero_1 (modulo10/numero_1)
+     LUT4:I0->O            1   0.612   0.357  modulo11/Mrom_visual41 (modulo11/Mrom_visual4)
+     OBUF:I->O                 3.169          vis_4_OBUF (vis<4>)
+    ----------------------------------------
+    Total                      5.406ns (4.295ns logic, 1.111ns route)
+                                       (79.5% logic, 20.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.670ns (Levels of Logic = 3)
+  Source:            off (PAD)
+  Destination:       sonido (PAD)
+
+  Data Path: off to sonido
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.426  off_IBUF (off_IBUF)
+     LUT2:I1->O            1   0.612   0.357  modulo9/son1 (sonido_OBUF)
+     OBUF:I->O                 3.169          sonido_OBUF (sonido)
+    ----------------------------------------
+    Total                      5.670ns (4.887ns logic, 0.783ns route)
+                                       (86.2% logic, 13.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.69 secs
+ 
+--> 
+
+Total memory usage is 162852 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

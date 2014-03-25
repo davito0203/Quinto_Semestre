@@ -1,0 +1,132 @@
+--------------------------------------------------------------------------------
+Release 10.1 Trace  (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\trce.exe -ise
+D:/Unal/Proyectos VHDL/Practicas/Practica4/Finalcontador/Finalcontador.ise
+-intstyle ise -e 3 -s 5 -xml contador contador.ncd -o contador.twr contador.pcf
+-ucf contador.ucf
+
+Design file:              contador.ncd
+Physical constraint file: contador.pcf
+Device,package,speed:     xc3s200,ft256,-5 (PRODUCTION 1.39 2008-01-09)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clkm
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+reset       |    0.890(R)|    1.417(R)|reloj             |   0.000|
+s1          |    0.000(R)|    1.939(R)|reloj             |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock s0
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+reset       |    0.518(R)|    1.883(R)|reloj             |   0.000|
+s1          |   -0.372(R)|    2.405(R)|reloj             |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clkm to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+vis<0>      |    9.668(R)|reloj             |   0.000|
+vis<1>      |   10.070(R)|reloj             |   0.000|
+vis<2>      |    8.877(R)|reloj             |   0.000|
+vis<3>      |    8.678(R)|reloj             |   0.000|
+vis<4>      |    8.378(R)|reloj             |   0.000|
+vis<5>      |    9.283(R)|reloj             |   0.000|
+vis<6>      |    9.493(R)|reloj             |   0.000|
+------------+------------+------------------+--------+
+
+Clock s0 to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+vis<0>      |   10.134(R)|reloj             |   0.000|
+vis<1>      |   10.536(R)|reloj             |   0.000|
+vis<2>      |    9.343(R)|reloj             |   0.000|
+vis<3>      |    9.144(R)|reloj             |   0.000|
+vis<4>      |    8.844(R)|reloj             |   0.000|
+vis<5>      |    9.749(R)|reloj             |   0.000|
+vis<6>      |    9.959(R)|reloj             |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.989|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkm
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkm           |    2.695|         |         |         |
+s0             |    2.695|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock s0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkm           |    2.695|         |         |         |
+s0             |    2.695|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+v0             |seg<0>         |    7.436|
+v0             |seg<1>         |    7.262|
+v0             |seg<2>         |    7.047|
+v0             |seg<3>         |    7.248|
+v1             |seg<0>         |    7.900|
+v1             |seg<1>         |    7.713|
+v1             |seg<2>         |    7.511|
+v1             |seg<3>         |    7.699|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Oct 11 16:43:41 2010 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 75 MB
+
+
+

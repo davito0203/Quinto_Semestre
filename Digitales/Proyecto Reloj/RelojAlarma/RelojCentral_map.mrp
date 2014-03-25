@@ -1,0 +1,206 @@
+Release 10.1 Map K.31 (nt)
+Xilinx Mapping Report File for Design 'RelojCentral'
+
+Design Information
+------------------
+Command Line   : map -ise "C:/Documents and
+Settings/USER/Escritorio/RelojAlarma/RelojAlarma.ise" -intstyle ise -p
+xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd
+RelojCentral.ngd RelojCentral.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.46 $
+Mapped Date    : Thu Nov 04 23:35:21 2010
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    4
+Logic Utilization:
+  Number of Slice Flip Flops:           209 out of   9,312    2%
+  Number of 4 input LUTs:               176 out of   9,312    1%
+Logic Distribution:
+  Number of occupied Slices:            182 out of   4,656    3%
+    Number of Slices containing only related logic:     182 out of     182 100%
+    Number of Slices containing unrelated logic:          0 out of     182   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         331 out of   9,312    3%
+    Number used as logic:               176
+    Number used as a route-thru:        155
+  Number of bonded IOBs:                 18 out of     232    7%
+    IOB Flip Flops:                       2
+  Number of BUFGMUXs:                     2 out of      24    8%
+
+Peak Memory Usage:  155 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   2 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net mala is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net hala is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net modulo7/esti1 is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net modulo7/esti2 is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+| alarma                             | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0    |
+| breloj                             | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0    |
+| clk                                | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0    |
+| hora                               | IBUF             | INPUT     | LVCMOS25    |          |      | IFF1         |          | 0 / 2    |
+| minutos                            | IBUF             | INPUT     | LVCMOS25    |          |      | IFF1         |          | 0 / 2    |
+| off                                | IBUF             | INPUT     | LVCMOS25    |          |      |              |          | 0 / 0    |
+| seg<0>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| seg<1>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| seg<2>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| seg<3>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| sonido                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| vis<0>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| vis<1>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| vis<2>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| vis<3>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| vis<4>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| vis<5>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
+| vis<6>                             | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          | 0 / 0    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Nam |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| RelojCentral/      |           | 109/293       | 0/209         | 156/331       | 0/0           | 0/0       | 0/0       | 1/2   | 0/0   | RelojCentral          |
+| +modulo1           |           | 22/22         | 34/34         | 9/9           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo1  |
+| +modulo10          |           | 59/59         | 41/41         | 80/80         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo10 |
+| +modulo11          |           | 4/4           | 0/0           | 7/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo11 |
+| +modulo2           |           | 22/22         | 34/34         | 9/9           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo2  |
+| +modulo3           |           | 21/21         | 33/33         | 9/9           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo3  |
+| +modulo4           |           | 21/21         | 33/33         | 9/9           | 0/0           | 0/0       | 0/0       | 1/1   | 0/0   | RelojCentral/modulo4  |
+| +modulo5           |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo5  |
+| +modulo6           |           | 12/12         | 16/16         | 19/19         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo6  |
+| +modulo7           |           | 15/15         | 17/17         | 22/22         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo7  |
+| +modulo9           |           | 6/6           | 1/1           | 9/9           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | RelojCentral/modulo9  |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

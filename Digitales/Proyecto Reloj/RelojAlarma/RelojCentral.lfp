@@ -1,0 +1,5 @@
+# begin LFP file C:\Users\Gustavo Ocampo\Desktop\reloj\RelojAlarma\RelojCentral.lfp
+designfile RelojCentral.v
+parttype xc3s500e-5-fg320
+bus_delimiter 1;
+set_busdelim_onsave 1;

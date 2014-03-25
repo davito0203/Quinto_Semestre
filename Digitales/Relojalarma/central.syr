@@ -1,0 +1,190 @@
+Release 10.1 - xst K.31 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/Unal/Proyectos VHDL/Relojalarma/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> Parameter xsthdpdir set to D:/Unal/Proyectos VHDL/Relojalarma/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.28 secs
+ 
+--> Reading design: central.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "central.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "central"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : central
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : central.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "visualizacion.v" in library work
+Compiling verilog file "setupalam.v" in library work
+Module <visualizacion> compiled
+Compiling verilog file "reloj.v" in library work
+Module <setupalam> compiled
+Compiling verilog file "muxvisual.v" in library work
+Module <reloj> compiled
+Compiling verilog file "mux2a1alam.v" in library work
+Module <muxvisual> compiled
+Compiling verilog file "freq2.v" in library work
+Module <mux2a1alam> compiled
+Compiling verilog file "freq1.v" in library work
+Module <freq2> compiled
+Compiling verilog file "debouncer.v" in library work
+Module <freq1> compiled
+Compiling verilog file "alarma.v" in library work
+Module <debouncer> compiled
+Compiling verilog file "central.v" in library work
+Module <alarma> compiled
+Module <central> compiled
+No errors in compilation
+Analysis of file <"central.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <central> in library <work>.
+
+Analyzing hierarchy for module <freq1> in library <work>.
+
+Analyzing hierarchy for module <freq2> in library <work>.
+
+Analyzing hierarchy for module <debouncer> in library <work>.
+
+Analyzing hierarchy for module <setupalam> in library <work>.
+
+Analyzing hierarchy for module <reloj> in library <work>.
+
+Analyzing hierarchy for module <mux2a1alam> in library <work>.
+
+Analyzing hierarchy for module <muxvisual> in library <work>.
+
+Analyzing hierarchy for module <visualizacion> in library <work>.
+
+Analyzing hierarchy for module <alarma> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <central>.
+WARNING:Xst:852 - "central.v" line 69: Unconnected input port 'buttonreloj' of instance 'modulo6' is tied to GND.
+Module <central> is correct for synthesis.
+ 
+Analyzing module <freq1> in library <work>.
+Module <freq1> is correct for synthesis.
+ 
+Analyzing module <freq2> in library <work>.
+Module <freq2> is correct for synthesis.
+ 
+Analyzing module <debouncer> in library <work>.
+Module <debouncer> is correct for synthesis.
+ 
+Analyzing module <setupalam> in library <work>.
+WARNING:Xst:1467 - "setupalam.v" line 40: Reset or set value is not constant in <al0>. It could involve simulation mismatches
+ERROR:Xst:899 - "setupalam.v" line 40: The logic for <al0> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
+WARNING:Xst:1467 - "setupalam.v" line 43: Reset or set value is not constant in <al1>. It could involve simulation mismatches
+ERROR:Xst:899 - "setupalam.v" line 43: The logic for <al1> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
+WARNING:Xst:1467 - "setupalam.v" line 61: Reset or set value is not constant in <al2>. It could involve simulation mismatches
+ERROR:Xst:899 - "setupalam.v" line 61: The logic for <al2> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
+WARNING:Xst:1467 - "setupalam.v" line 62: Reset or set value is not constant in <al3>. It could involve simulation mismatches
+ERROR:Xst:899 - "setupalam.v" line 62: The logic for <al3> does not match a known FF or Latch template. The description style you are using to describe a register or latch is not supported in the current software release.
+ 
+Found 4 error(s). Aborting synthesis.
+--> 
+
+Total memory usage is 125632 kilobytes
+
+Number of errors   :    4 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

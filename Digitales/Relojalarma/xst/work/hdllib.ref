@@ -1,0 +1,10 @@
+MO reloj NULL reloj.v vlg44/reloj.bin 1287937799
+MO setupalam NULL setupalam.v vlg4C/setupalam.bin 1287937799
+MO muxvisual NULL muxvisual.v vlg42/muxvisual.bin 1287937799
+MO mux2a1alam NULL mux2a1alam.v vlg21/mux2a1alam.bin 1287937799
+MO alarma NULL alarma.v vlg42/alarma.bin 1287937799
+MO freq1 NULL freq1.v vlg73/freq1.bin 1287937799
+MO freq2 NULL freq2.v vlg74/freq2.bin 1287937799
+MO central NULL central.v vlg09/central.bin 1287937799
+MO visualizacion NULL visualizacion.v vlg31/visualizacion.bin 1287937799
+MO debouncer NULL debouncer.v vlg03/debouncer.bin 1287937799

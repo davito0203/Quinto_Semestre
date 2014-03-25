@@ -1,0 +1,56 @@
+xst -ise "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojCentral.xst" -ofn "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf -ucf RelojCentral.ucf
+bitgen -ise "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd
+xst -ise "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojCentral.xst" -ofn "D:/Unal/Proyectos VHDL/Practicas/RelojAlarma/RelojCentral.syr"
+xst -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.xst" -ofn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf
+bitgen -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd
+xst -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.xst" -ofn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.syr"
+xst -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.xst" -ofn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf -ucf RelojCentral.ucf
+bitgen -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd
+xst -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.xst" -ofn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf -ucf RelojCentral.ucf
+bitgen -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd
+xst -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.xst" -ofn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf -ucf RelojCentral.ucf
+bitgen -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd
+xst -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.xst" -ofn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf -ucf RelojCentral.ucf
+bitgen -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd
+xst -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.xst" -ofn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf -ucf RelojCentral.ucf
+bitgen -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd
+xst -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.xst" -ofn "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf -ucf RelojCentral.ucf
+bitgen -ise "C:/Users/Gustavo Ocampo/Desktop/reloj/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd
+xst -ise "C:/Documents and Settings/USER/Escritorio/RelojAlarma/RelojAlarma.ise" -intstyle ise -ifn "C:/Documents and Settings/USER/Escritorio/RelojAlarma/RelojCentral.xst" -ofn "C:/Documents and Settings/USER/Escritorio/RelojAlarma/RelojCentral.syr"
+ngdbuild -ise "C:/Documents and Settings/USER/Escritorio/RelojAlarma/RelojAlarma.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s500e-fg320-5 "RelojCentral.ngc" RelojCentral.ngd
+map -ise "C:/Documents and Settings/USER/Escritorio/RelojAlarma/RelojAlarma.ise" -intstyle ise -p xc3s500e-fg320-5 -cm area -pr off -k 4 -c 100 -o RelojCentral_map.ncd RelojCentral.ngd RelojCentral.pcf
+par -ise "C:/Documents and Settings/USER/Escritorio/RelojAlarma/RelojAlarma.ise" -w -intstyle ise -ol std -t 1 RelojCentral_map.ncd RelojCentral.ncd RelojCentral.pcf
+trce -ise "C:/Documents and Settings/USER/Escritorio/RelojAlarma/RelojAlarma.ise" -intstyle ise -e 3 -s 5 -xml RelojCentral RelojCentral.ncd -o RelojCentral.twr RelojCentral.pcf -ucf RelojCentral.ucf
+bitgen -ise "C:/Documents and Settings/USER/Escritorio/RelojAlarma/RelojAlarma.ise" -intstyle ise -f RelojCentral.ut RelojCentral.ncd

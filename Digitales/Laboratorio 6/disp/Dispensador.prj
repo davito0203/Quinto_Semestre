@@ -1,0 +1,3 @@
+verilog work "freq2.v"
+verilog work "divfreqvis.v"
+verilog work "Dispensador.v"
